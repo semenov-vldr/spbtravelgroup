@@ -1,4 +1,6 @@
 .header
+  position: fixed
+  width: 100%
   background-color: $yellow
   min-height: 90px
   @extend .flex-center
@@ -35,10 +37,12 @@
     width: 100%
     @media (max-width: $width-mobile)
       gap: 40px
+    @media (max-width: 480px)
+      gap: 20px
 
   &__logo
     font-weight: 600
-    @include fontSize(18, 25)
+    @include fontSize(14, 25)
 
   &__nav
     @media (max-width: $width-mobile)
