@@ -7,7 +7,7 @@
   word-break: break-word
   white-space: nowrap
   @media (max-width: $width-mobile)
-    min-height: 60px
+    min-height: 65px
   @media (max-width: 480px)
     min-height: 55px
 
@@ -41,19 +41,26 @@
       gap: 20px
 
   &__logo
-    font-weight: 600
-    @include fontSize(14, 25)
+    img
+      max-height: 40px
+    &-icon
+      display: none
+    @media (max-width: 640px)
+      &-text
+        display: none
+      &-icon
+        display: block
 
   &__nav
     @media (max-width: $width-mobile)
       display: none
-      background-color: $black
-      color: #fff
+      background-color: #fff
+      color: $black
       position: fixed
       height: 100vh
       max-height: calc(100vh - 64px)
       min-height: 480px
-      top: 60px
+      top: 65px
       left: 0
       right: 0
       z-index: 100
@@ -63,20 +70,22 @@
     @media (max-width: 480px)
       top: 55px
 
-
     &-item
       position: relative
       @media (min-width: $width-mobile)
         &:hover .header__subnav
           display: grid
       @media (max-width: $width-mobile)
-        border-bottom: 2px solid $yellow
+        border-bottom: 1px solid black
         width: 100%
         display: flex
         flex-direction: column
         align-items: center
         &.js-subnav-open .header__subnav
           display: grid
+        &.js-subnav-open .header__nav-link::after
+          transform: rotate(0deg)
+
 
     &-list
       display: flex
@@ -85,6 +94,7 @@
       @media (max-width: $width-mobile)
         flex-direction: column
         gap: 0
+        padding: 0 20px 100px
 
     &-link
       position: relative
@@ -100,7 +110,7 @@
       border: 2px solid transparent
       transition: 0.3s
       @media (max-width: 1500px)
-        padding: 8px
+        padding: 16px 8px
         min-height: 40px
       &::after
         content: ""
@@ -112,16 +122,15 @@
         background-repeat: no-repeat
         background-size: cover
         transition: 0.3s
-        transform: rotate(180deg)
-        @media (min-width: $width-mobile)
-          &:hover::after
-            transform: rotate(0deg)
         @media (max-width: $width-mobile)
           transform: rotate(-90deg)
-          background-image: url('../img/icons/arrow-down-white.svg')
+      @media (min-width: $width-mobile)
+        &:hover::after
+          transform: rotate(180deg)
       @media (max-width: $width-mobile)
         width: 100%
-        justify-content: center
+        justify-content: space-between
+
 
     &-link--dark
       @media (min-width: $width-mobile)
@@ -143,12 +152,11 @@
           background-image: url('../img/icons/arrow-down-white.svg')
 
 
-
   &__subnav
     position: absolute
     display: none
     flex-direction: column
-    gap: 12px
+    gap: 8px
     background-color: #fff
     padding: 16px 0
     border-radius: 10px
@@ -160,14 +168,16 @@
     font-size: 18px
     word-break: initial
     white-space: initial
+    transition: 0.3s
     @media (max-width: $width-mobile)
+      display: none
       position: initial
       background-color: transparent
       grid-template-columns: 1fr
       border-radius: 0
       transform: none
       width: 100%
-      text-align: center
+      padding: 0 0 16px
     &--excursion
       max-width: 650px
       grid-template-columns: repeat(2, 300px)
@@ -184,15 +194,27 @@
 
     &-link
       width: 100%
-      padding: 0 16px
-      display: flex
-      flex-direction: column
+      padding: 8px 16px
+      display: grid
+      grid-template-columns: 35px auto
+      column-gap: 14px
       border-left: 3px solid transparent
       border-radius: 2px
       transition: border 0.5s ease-out
+      @media (max-width: $width-mobile)
+        display: flex
+        align-items: center
       &:hover
         border-color: $yellow
+      img
+        width: 100%
+        max-width: 35px
+        grid-column: span 1
+        grid-row: span 2
+        @media (max-width: $width-mobile)
+          max-width: 30px
       small
+        grid-column: 2 / span 1
         opacity: 0.8
         @media (max-width: $width-mobile)
           display: none
@@ -200,6 +222,8 @@
   &__contact
     font-weight: 600
     @include fontSize(14, 20)
+    svg
+      display: none
     @media (max-width: $width-mobile)
       margin-left: auto
     &-phone
@@ -213,8 +237,11 @@
         border-radius: 8px
         padding: 4px 8px
       @media (max-width: 480px)
-        .header__contact-phone-text
+        .header__contact-phone-text,
+        .header__contact-phone-number
           display: none
+        svg
+          display: block
 
   &__burger
     width: 30px
@@ -237,14 +264,11 @@
       left: 0
       transform: rotate(0deg)
       transition: .25s ease-in-out
-
       &:nth-child(1)
         top: 0
-
       &:nth-child(2),
       &:nth-child(3)
         top: 9px
-
       &:nth-child(4)
         top: 18px
 
