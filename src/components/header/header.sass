@@ -43,9 +43,13 @@
   &__logo
     img
       max-height: 40px
+      @media (max-width: 600px)
+        max-height: 25px
+      @media (max-width: 380px)
+        max-height: 33px
     &-icon
       display: none
-    @media (max-width: 640px)
+    @media (max-width: 380px)
       &-text
         display: none
       &-icon
@@ -236,7 +240,7 @@
         width: fit-content
         border-radius: 8px
         padding: 4px 8px
-      @media (max-width: 480px)
+      @media (max-width: 500px)
         .header__contact-phone-text,
         .header__contact-phone-number
           display: none
