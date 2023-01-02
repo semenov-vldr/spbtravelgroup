@@ -64,21 +64,25 @@ main
 .section-column
   display: flex
   flex-direction: column
-  gap: 160px
+  gap: 80px
+  margin-bottom: 80px
   @media (max-width: 768px)
-    gap: 90px
+    gap: 40px
+    margin-bottom: 40px
 
 
 .title-section
   position: relative
   @include fontSize(18, 28)
   font-weight: 600
-  margin-bottom: clamp(28px, calc(28px + (80 - 28) * ((100vw - 768px) / (1920 - 768))), 80px)
+  margin-bottom: 30px
+  @media (max-width: $width-mobile)
+    margin-bottom: 20px
   &::before
     content: '/'
     color: $yellow
     display: inline-block
-    margin-right: 12px
+    margin-right: 8px
     font-weight: 700
 
 .flex-center
@@ -86,11 +90,16 @@ main
   align-items: center
   justify-content: center
 
-
 .button
-	background-color: $yellow
-	padding: 5px
-	border-radius: 5px
+  background-color: $yellow
+  border-radius: 5px
+  padding: 5px 10px
+  font-weight: 500
+  cursor: pointer
+  transition: $transition
+  &:hover
+    background-color: $black
+    color: #fff
 
 
 

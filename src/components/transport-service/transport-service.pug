@@ -1,18 +1,52 @@
 .transport-service
   .transport-service__container.container
-    h2.title-section Транспортное обслуживание от SPB Travel Group
+    h2.title-section Транспортное обслуживание от&nbsp;SPB&nbsp;Travel&nbsp;Group
 
-    .transport-service__content
-      ul.transport-service__list
+    .transport-service__content.swiper
 
-        li.transport-service__item
+      .transport-service__list.swiper-wrapper
+
+        section.transport-service__item
           .transport-service__item-image-wrapper
             img(src="./assets/img/transport-service/01.png")
           .transport-service__item-content
             span.transport-service__item-level Комфорт+
             span.transport-service__item-brand VW Polo, Skoda
-            span.transport-service__item-info Минимальный заказ 2+1 час
+            span.transport-service__item-info Минимальный заказ 2+1&nbsp;час
           .transport-service__item-footer
             span.transport-service__item-price 600 ₽/час
+            button.button Заказать
+
+        section.transport-service__item
+          .transport-service__item-image-wrapper
+            img(src="./assets/img/transport-service/02.png")
+          .transport-service__item-content
+            span.transport-service__item-level Бизнес-Класс
+            span.transport-service__item-brand Toyota Camry, Mercedes E
+            span.transport-service__item-info Минимальный заказ 3+1&nbsp;час
+          .transport-service__item-footer
+            span.transport-service__item-price 750 ₽/час
+            button.button Заказать
+
+        section.transport-service__item
+          .transport-service__item-image-wrapper
+            img(src="./assets/img/transport-service/03.png")
+          .transport-service__item-content
+            span.transport-service__item-level Минивен
+            span.transport-service__item-brand Mercedes Вenz
+            span.transport-service__item-info Минимальный заказ 3+1&nbsp;час
+          .transport-service__item-footer
+            span.transport-service__item-price 850 ₽/час
+            button.button Заказать
+
+        section.transport-service__item
+          .transport-service__item-image-wrapper
+            img(src="./assets/img/transport-service/04.png")
+          .transport-service__item-content
+            span.transport-service__item-level Автобус (18-49 мест)
+            span.transport-service__item-brand Mercedes, Спринтер
+            span.transport-service__item-info Минимальный заказ 3+1&nbsp;час
+          .transport-service__item-footer
+            span.transport-service__item-price 1000 ₽/час
             button.button Заказать
 
