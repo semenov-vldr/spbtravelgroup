@@ -7,6 +7,7 @@ if (header) {
 
   headerBurger.addEventListener('click', () => {
     header.classList.toggle('js-menu-open');
+    toggleScrollBody();
   })
 
   const navItems = header.querySelectorAll('.header__nav-item');
@@ -107,3 +108,26 @@ if (header) {
 
 
 }
+
+
+const html = document.querySelector('html');
+
+const classBlockScroll = 'js-blockScroll';
+
+
+function blockScrollBody () {
+  if ( !html.classList.contains(classBlockScroll) ) {
+    html.classList.add(classBlockScroll);
+  }
+};
+
+function unblockScrollBody () {
+  if ( html.classList.contains(classBlockScroll) ) {
+    html.classList.remove(classBlockScroll);
+  }
+};
+
+function toggleScrollBody () {
+  html.classList.toggle(classBlockScroll);
+
+};
