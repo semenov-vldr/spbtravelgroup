@@ -6,6 +6,7 @@ if (header) {
 
   headerBurger.addEventListener('click', () => {
     header.classList.toggle('js-menu-open');
+    toggleScrollBody();
   })
 
   const navItems = header.querySelectorAll('.header__nav-item');

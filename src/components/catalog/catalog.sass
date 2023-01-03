@@ -11,6 +11,9 @@
     &-list
       display: grid
       grid-gap: 20px
+      overflow: hidden
+      @media (max-width: 768px)
+        grid-gap: 12px
 
       &--3categ
         grid-template-columns: repeat(3, 1fr)
@@ -25,9 +28,6 @@
             grid-column: span 2
 
 
-
-
-
     &-item
       position: relative
       border-radius: 12px
@@ -36,6 +36,7 @@
       color: #fff
       word-break: break-word
       overflow: hidden
+      box-shadow: 0 0 10px 0 rgb(35 31 32 / 10%)
       @media (max-width: $width-mobile)
         min-height: 140px
       &::after
@@ -64,7 +65,7 @@
         background-size: cover
         background-position: center
         background-repeat: no-repeat
-        transition: 0.3s
+        transition: 0.5s
 
       h3
         position: relative

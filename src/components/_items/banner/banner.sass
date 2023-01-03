@@ -1,0 +1,32 @@
+.banner
+
+  &__content
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    color: #fff
+    padding: 20px
+    border-radius: 12px
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+  &__title
+    font-weight: 700
+    @include fontSize(18, 24)
+
+  &__text
+    font-weight: 500
+    @include fontSize(14, 16)
+
+  &__actions
+    display: flex
+    gap: 8px
+
+  &__price
+    &:hover
+      background-color: $yellow
+      color: $black
+      cursor: initial
+
+

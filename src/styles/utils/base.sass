@@ -5,12 +5,12 @@ html
   height: 100%
   background-color: $bg-color
   color: $black
+  &.js-blockScroll
+    overflow: hidden
 
 body
   height: 100%
 
-body.js-block-scroll
-  position: fixed
 
 
 .page
@@ -91,15 +91,23 @@ main
   justify-content: center
 
 .button
-  background-color: $yellow
   border-radius: 5px
   padding: 5px 10px
   font-weight: 500
   cursor: pointer
   transition: $transition
-  &:hover
-    background-color: $black
-    color: #fff
+  @extend .flex-center
+  @include fontSize(14, 16)
+
+
+  &--accent
+    background-color: $yellow
+    color: $black
+    &:hover
+      background-color: $black
+      color: #fff
+  &--outline
+    border: 2px solid #fff
 
 
 
