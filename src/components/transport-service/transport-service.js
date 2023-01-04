@@ -4,7 +4,7 @@
 
   const swiperList = document.querySelectorAll('.transport-service__content');
 
-  if (swiperList) createSwiper(swiperList);
+  //if (swiperList) createSwiper(swiperList);
 
 
 
