@@ -5,6 +5,10 @@ new Swiper('.excursion__slider-wrapper', {
     clickable: true,
   },
 
+  autoplay: {
+    delay: 3000,
+  },
+
   // Откл функционала, если слайдов меньше, чем нужно
   watchOverflow: true,
 
@@ -18,7 +22,7 @@ new Swiper('.excursion__slider-wrapper', {
   // Стартовый слайд
   initialSlide: 0,
 
-  loop: true,
+  //loop: true,
 
   // Брейк поинты (адаптив)
   // Ширина экрана
@@ -29,107 +33,22 @@ new Swiper('.excursion__slider-wrapper', {
     400: {
       slidesPerView: 1.5,
     },
-    480: {
-      slidesPerView: 2.2,
+
+    500: {
+      slidesPerView: 1.8,
     },
 
-    600: {
-      slidesPerView: 2.7
+    700: {
+      slidesPerView: 2.3,
     },
 
-    850: {
+    1000: {
       slidesPerView: 3.2,
     },
-    1200: {
-      slidesPerView: 4.2,
-    }
+    // 1200: {
+    //   slidesPerView: 4.2,
+    // }
   }
 
 });
 
-
-// {
-//
-//   let mySwiper;
-//
-//   const swiperList = document.querySelectorAll('.excursion__slider-wrapper');
-//
-//   if (swiperList) createSwiper(swiperList);
-//
-//
-//
-//   function createSwiper (swiperList) {
-//     swiperList.forEach(swiper => {
-//
-//       mySwiper = new Swiper(swiper, {
-//         // pagination: {
-//         //   el: '.swiper-pagination',
-//         //   clickable: true,
-//         // },
-//         // navigation: {
-//         //   nextEl: '.slider-nav__next',
-//         //   prevEl: '.slider-nav__prev',
-//         // },
-//
-//         // scrollbar: {
-//         //   el: '.swiper-scrollbar',
-//         //   draggable: true,
-//         // },
-//
-//         uniqueNavElements: true,
-//
-//         slideClass: 'excursion-card',
-//
-//         //slidesPerView: 4,
-//
-//         // Бесконечная прокрутка
-//         //loop: true,
-//
-//         // Откл функционала, если слайдов меньше, чем нужно
-//         watchOverflow: true,
-//
-//         //centeredSlides: true,
-//
-//         // Отступ между слайдами
-//         spaceBetween: 24,
-//
-//         // Стартовый слайд
-//         //initialSlide: 0,
-//
-//         // Брейк поинты (адаптив)
-//         // Ширина экрана
-//         breakpoints: {
-//           320: {
-//             slidesPerView: 1.1,
-//             spaceBetween: 16,
-//           },
-//
-//           480: {
-//             slidesPerView: 2.2,
-//             spaceBetween: 20,
-//           },
-//
-//           768: {
-//             slidesPerView: 3.2
-//           },
-//
-//           1100: {
-//             slidesPerView: 4
-//           },
-//
-//         }
-//       });
-//
-//     })
-//   };
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// }

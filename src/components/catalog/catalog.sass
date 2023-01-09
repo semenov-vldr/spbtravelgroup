@@ -19,6 +19,9 @@
         & > li.catalog__section-item
           grid-column: 1 / -1
 
+
+      &--2categ
+        grid-template-columns: repeat(2, 1fr)
       &--3categ
         grid-template-columns: repeat(3, 1fr)
       &--4categ
@@ -78,7 +81,7 @@
         z-index: 1
         font-weight: 600
         padding: 20px
-        margin-top: auto
-        @include fontSize(18, 20)
+        //margin-top: auto
+        @include fontSize(18, 22)
         @media (max-width: $width-mobile)
           padding: 14px

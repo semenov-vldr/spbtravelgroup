@@ -1,5 +1,5 @@
 -
-  const excursionData = [
+  const popularExcursionData = [
     {
       link: '##',
       imgSrc: 'https://thumb.tildacdn.com/tild6131-6164-4561-b331-663531303430/-/cover/700x470/center/center/-/format/webp/Yk7xoFRUTS2DgmArrGvy.jpg',
@@ -7,7 +7,8 @@
       title: 'Императорские и великокняжеские дворцы Санкт-Петербурга',
       days: 'вт, сб',
       time: '13:00',
-      price: 'от 1 500 ₽',
+      price: '1 500 ₽',
+      descriptionList: ['Описание 1', 'Описание Описание 2', 'Описание 3'],
     },
 
     {
@@ -17,7 +18,8 @@
       title: 'Обзорная экскурсия по городу (автобусная или индивидуальная)',
       days: 'пн - вс',
       time: '10:00, 11:00, 12:00, 14:00, 15:00, 16:30, 17:00, 17:55',
-      price: 'от 700 ₽',
+      price: '700 ₽',
+      descriptionList: ['Описание 1', 'Описание 2', 'Описание Описание 3'],
     },
 
     {
@@ -27,7 +29,8 @@
       title: 'Обзорная экскурсия по городу с посещением Эрмитажа',
       days: 'пн - вс',
       time: '13:00, 16:00',
-      price: 'от 1 500 ₽',
+      price: '1 500 ₽',
+      descriptionList: ['Описание Описание 1', 'Описание 2', 'Описание 3'],
     },
 
     {
@@ -37,7 +40,8 @@
       title: 'Новогодняя сказка Петербурга',
       days: 'пн - вс',
       time: '18:00',
-      price: 'от 1 200 ₽',
+      price: '1 200 ₽',
+      descriptionList: ['Описание Описание 1', 'Описание 2'],
     },
 
     {
@@ -47,19 +51,19 @@
       title: 'Мифы и легенды города (автобусная или индивидуальная)',
       days: 'пн - вс',
       time: '13:00, 16:00',
-      price: 'от 1 000 ₽',
+      price: '1 000 ₽',
     },
   ];
 
 
 .excursion
   .container
-    h2.title-section Экскурсии на Новый Год и Рождество
+    h2.title-section Популярные экскурсии
     .excursion__slider-container
       .excursion__slider-wrapper
         .excursion__list.swiper-wrapper
 
-          //+excursionsSlider(excursionData)
+          +excursionsSlider(popularExcursionData)
 
         .swiper-pagination
 

@@ -5,6 +5,30 @@ header.header
       img.header__logo-icon(src="./assets/img/icons/logo-border.svg")
 
     nav.header__nav
+
+      ul.header__nav-top-list
+
+        li.header__nav-top-item
+          a.header__nav-top-link(href="##")
+            include ../../img/icons/subnav/1,6.svg
+            span.header__nav-top-text Экскурсии <br> по Петербургу
+
+        li.header__nav-top-item
+          a.header__nav-top-link(href="##")
+            include ../../img/icons/subnav/2.svg
+            span.header__nav-top-text Экскурсии <br> в пригороды
+
+        li.header__nav-top-item
+          a.header__nav-top-link(href="##")
+            include ../../img/icons/subnav/12.svg
+            span.header__nav-top-text Школьные <br> экскурсии и туры
+
+        li.header__nav-top-item
+          a.header__nav-top-link(href="##")
+            include ../../img/icons/subnav/10.svg
+            span.header__nav-top-text Аренда <br> транспорта
+
+
       ul.header__nav-list
 
         li.header__nav-item
@@ -120,6 +144,13 @@ header.header
                 img(src="./assets/img/icons/subnav/20.svg")
                 span Аренда катеров и яхт
                 small Высокий комфорт. Отличный отдых на воде
+
+        li.header__nav-item.desctop-hidden
+          a.header__nav-link(href="##") Контакты
+        li.header__nav-item.desctop-hidden
+          a.header__nav-link(href="##") Отзывы
+        li.header__nav-item.desctop-hidden
+          a.header__nav-link(href="##") Оплата и возврат
 
 
     .header__contact

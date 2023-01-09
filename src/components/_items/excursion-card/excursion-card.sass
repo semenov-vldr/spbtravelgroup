@@ -5,6 +5,8 @@
   display: flex
   flex-direction: column
   box-shadow: 0 0 5px 5px rgba($grey, 0.1)
+  &:hover
+    box-shadow: 0 0 5px 5px rgba($grey, 0.2)
 
   &__image
     overflow: hidden
@@ -57,9 +59,10 @@
     font-size: 20px
     font-weight: 600
     margin-top: 8px
-    small
-      color: $grey
-      margin-left: 5px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
 
   &__timetable
     position: relative
@@ -85,5 +88,19 @@
       background-repeat: no-repeat
       background-position: center
       background-size: cover
+
+  &__description-list
+    display: flex
+    flex-direction: column
+    gap: 5px
+
+  &__description-item
+    position: relative
+    &::before
+      content: "\2713"
+      color: $yellow
+      font-weight: 500
+      margin-right: 8px
+
 
 

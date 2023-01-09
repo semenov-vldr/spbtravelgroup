@@ -71,9 +71,43 @@
       z-index: 100
       overflow-y: auto
       overscroll-behavior: contain
-      padding: 70px 0
+      padding: 0 0 70px
     @media (max-width: 480px)
       top: 55px
+
+    &-top-list
+      padding: 25px 20px
+      display: grid
+      grid-template-columns: 1fr 1fr
+      gap: 8px
+      @media (min-width: $width-mobile)
+        display: none
+
+    &-top-item
+      padding: 10px
+      border-radius: 9px
+      border: 1px solid $black
+      width: 100%
+      text-align: center
+
+    &-top-link
+      display: flex
+      flex-direction: column
+      align-items: center
+      font-size: 14px
+      color: $black
+      word-break: break-word
+      svg
+        width: 35px
+        height: 35px
+        max-width: 35px
+        fill: $black
+
+    &-top-text
+      br
+        @media (min-width: 480px)
+          display: none
+
 
     &-item
       position: relative
@@ -81,11 +115,10 @@
         &:hover .header__subnav
           display: grid
       @media (max-width: $width-mobile)
-        border-bottom: 1px solid black
         width: 100%
         display: flex
         flex-direction: column
-        align-items: center
+        //align-items: center
         &.js-subnav-open .header__subnav
           display: grid
         &.js-subnav-open .header__nav-link::after
