@@ -1,4 +1,70 @@
 .footer
   background-color: $black
-  color: $yellow
   padding: 20px 0
+  color: #fff
+
+  &__container
+    display: flex
+    flex-direction: column
+    gap: 12px
+    & > *
+      width: fit-content
+
+  &__logo img
+    width: 250px
+
+  &__contacts-item
+    display: flex
+    align-items: center
+    gap: 8px
+
+
+  &__social-list
+    display: flex
+    gap: 12px
+    align-items: center
+
+  &__social-item
+    position: relative
+
+  &__social-link
+    display: block
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    width: 30px
+    height: 30px
+
+  &__social-hint-icon
+    width: 12px
+    height: 12px
+    position: absolute
+    right: -14px
+    top: -8px
+    cursor: pointer
+    &:hover + .footer__social-hint-text
+      opacity: 1
+      visibility: visible
+
+
+  &__social-hint-text
+    position: absolute
+    z-index: 1
+    width: 150px
+    padding: 5px
+    border: 1px solid #fff
+    border-radius: 5px
+    background-color: $black
+    font-size: 12px
+    top: -12px
+    right: -7px
+    text-align: center
+    transform: translate(100%, -100%)
+    opacity: 0
+    visibility: hidden
+    span
+      color: $yellow
+
+  &__copyright,
+  &__policy
+    font-size: 12px

@@ -18,5 +18,4 @@ function unblockScrollBody () {
 
 function toggleScrollBody () {
   html.classList.toggle(classBlockScroll);
-
 };

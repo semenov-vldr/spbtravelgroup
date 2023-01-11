@@ -1,3 +1,29 @@
 footer.footer
   .container.footer__container
-    h1 Footer
+    a.footer__logo(href="index.html")
+      img(src="./assets/img/icons/logo-footer.svg")
+
+    .footer__contacts
+      a.footer__contacts-item(href="tel:+79111562004")
+        svg(width="35" height="35" fill="#ffcc00")
+          use(href='./assets/img/sprite.svg#phone')
+        | +7 (911) 156-20-04
+
+    .footer__social
+      ul.footer__social-list
+        li.footer__social-item
+          a.footer__social-link(href="##" style="background-image: url('./assets/img/icons/social/telegram.svg')")
+        li.footer__social-item
+          a.footer__social-link(href="##" style="background-image: url('./assets/img/icons/social/vk.svg')")
+
+        li.footer__social-item
+          a.footer__social-link(href="##" style="background-image: url('./assets/img/icons/social/instagram.svg')")
+          img.footer__social-hint-icon(src="./assets/img/icons/important.svg")
+          span.footer__social-hint-text <span>#spbtravelgroup</span> — десятки тысяч фотографий путешественников.
+
+        li.footer__social-item
+          a.footer__social-link(href="##" style="background-image: url('./assets/img/icons/social/whatsapp.svg')")
+
+
+    a.footer__policy(href="##") Политика конфиденциальности
+    p.footer__copyright &copy; 2016—<span></span> ООО «СПБ Тревел Групп». ИНН 7751177808 ОГРН 1207700095833 Номер в реестре Туроператоров РТО 022600 (Приказ № 38-Пр-21) изображения и текстов возможно только с указанием активной ссылки на сайт СПБ Тревел Групп.

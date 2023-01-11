@@ -1,0 +1,66 @@
+-
+  const excursionData = [
+    {
+    link: '##',
+    imgSrc: 'https://thumb.tildacdn.com/tild6131-6164-4561-b331-663531303430/-/cover/700x470/center/center/-/format/webp/Yk7xoFRUTS2DgmArrGvy.jpg',
+    duration: '3 часа',
+    title: 'Императорские и великокняжеские дворцы Санкт-Петербурга',
+    days: 'вт, сб',
+    time: '13:00',
+    price: '1 500 ₽',
+    descriptionList: ['Описание 1', 'Описание Описание 2', 'Описание 3'],
+    },
+
+    {
+    link: '##',
+    imgSrc: 'https://thumb.tildacdn.com/tild3938-3232-4336-b332-343663353738/-/cover/700x470/center/center/-/format/webp/qVt5TsyywpEXf6vpCwbn.jpg',
+    duration: '1.5 часа',
+    title: 'Обзорная экскурсия по городу (автобусная или индивидуальная)',
+    days: 'пн - вс',
+    time: '10:00, 11:00, 12:00, 14:00, 15:00, 16:30, 17:00, 17:55',
+    price: '700 ₽',
+    descriptionList: ['Описание 1', 'Описание 2', 'Описание Описание 3'],
+    },
+
+    {
+    link: '##',
+    imgSrc: 'https://thumb.tildacdn.com/tild3730-6364-4063-b130-343965336234/-/cover/350x235/center/center/-/format/webp/m9tF8ucwVgMQHnQAwo9N.jpg',
+    duration: '2.5-3 часа',
+    title: 'Обзорная экскурсия по городу с посещением Эрмитажа',
+    days: 'пн - вс',
+    time: '13:00, 16:00',
+    price: '1 500 ₽',
+    descriptionList: ['Описание Описание 1', 'Описание 2', 'Описание 3'],
+    },
+
+    {
+    link: '##',
+    imgSrc: 'https://thumb.tildacdn.com/tild3236-6239-4930-a532-616235663638/-/cover/350x235/center/center/-/format/webp/g1AQbFLkCWgYpvLybfee.jpg',
+    duration: '2.5 часа',
+    title: 'Новогодняя сказка Петербурга',
+    days: 'пн - вс',
+    time: '18:00',
+    price: '1 200 ₽',
+    descriptionList: ['Описание Описание 1', 'Описание 2'],
+    },
+
+    {
+    link: '##',
+    imgSrc: 'https://thumb.tildacdn.com/tild3462-6431-4233-b332-366434303937/-/cover/350x235/center/center/-/format/webp/IMG_0856-min.JPG',
+    duration: '2-2.5 часа',
+    title: 'Мифы и легенды города (автобусная или индивидуальная)',
+    days: 'пн - вс',
+    time: '13:00, 16:00',
+    price: '1 000 ₽',
+    descriptionList: ['Описание 1'],
+    },
+  ];
+
+.excursion
+  .container.excursion__container
+    h2.title-section Выберите вариант экскурсий
+    .excursion__filter
+
+    .excursion__grid
+
+      +excursions(excursionData)

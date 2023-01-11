@@ -14,10 +14,11 @@ if (header) {
   navItems.forEach(navItem => {
 
     navItem.addEventListener('click', () => {
-      navItem.classList.toggle('js-subnav-open')
-    })
+      navItem.classList.toggle('js-subnav-open');
+    });
 
-
+    const subnav = navItem.querySelector('.header__subnav');
+    (!subnav) ? navItem.classList.add('empty') : navItem.classList.remove('empty');
   })
 
 }

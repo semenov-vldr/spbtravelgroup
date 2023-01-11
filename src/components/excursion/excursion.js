@@ -7,6 +7,7 @@ new Swiper('.excursion__slider-wrapper', {
 
   autoplay: {
     delay: 3000,
+    disableOnInteraction: false,
   },
 
   // Откл функционала, если слайдов меньше, чем нужно
@@ -31,7 +32,7 @@ new Swiper('.excursion__slider-wrapper', {
       slidesPerView: 1.2,
     },
     400: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.3,
     },
 
     500: {

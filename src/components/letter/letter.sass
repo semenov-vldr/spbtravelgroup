@@ -26,15 +26,15 @@ $heart-width : 50px
 .flap
   border-left: 140px solid transparent
   border-right: 140px solid transparent
-  border-bottom: ($env-height / 2) - 8 solid transparent
-  border-top: ($env-height / 2) + 8 solid $color-flap
+  border-bottom: 82px solid transparent
+  border-top: 98px solid $color-flap
   transform-origin: top
   pointer-events: none
 .pocket
-  border-left: ($env-width / 2) solid $color-env
-  border-right: ($env-width / 2) solid $color-env
-  border-bottom: ($env-height / 2) solid $color-env2
-  border-top: ($env-height / 2) solid transparent
+  border-left: 140px solid $color-env
+  border-right: 140px solid $color-env
+  border-bottom: 90px solid $color-env2
+  border-top: 90px solid transparent
   border-bottom-left-radius: $env-border-radius
   border-bottom-right-radius: $env-border-radius
 .letter
@@ -98,7 +98,7 @@ $heart-width : 50px
     animation: none
 .hearts
   position: absolute
-  top: ($env-height / 2)
+  top: calc($env-height / 2)
   left: 0
   right: 0
   z-index: 2

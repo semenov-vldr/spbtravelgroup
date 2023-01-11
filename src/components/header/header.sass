@@ -118,11 +118,12 @@
         width: 100%
         display: flex
         flex-direction: column
-        //align-items: center
         &.js-subnav-open .header__subnav
           display: grid
         &.js-subnav-open .header__nav-link::after
           transform: rotate(0deg)
+        &.empty .header__nav-link::after
+          display: none
 
 
     &-list

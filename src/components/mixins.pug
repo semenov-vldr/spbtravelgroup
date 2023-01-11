@@ -82,19 +82,23 @@ mixin excursionsSlider (excursionData)
 
 
 // Карточка экскурсии (для слайдера)
-//mixin excursionsGrid (excursionData)
-//  each card in excursionData
-//    article.excursion-card
-//      .excursion-card__image
-//        img(src=card.imgSrc)
-//        .excursion-card__badges
-//          span.excursion-card__badge=card.duration
-//      .excursion-card__content
-//        h3.excursion-card__title=card.title
-//        p.excursion-card__timetable
-//          span #{card.days}:
-//          | #{card.time}
-//        .excursion-card__price
-//          span=card.price
-//          a.button.button--accent(href=card.link) Подробнее
+mixin excursions (excursionData)
+  each card in excursionData
+    article.excursion-card
+      .excursion-card__image
+        img(src=card.imgSrc)
+        .excursion-card__badges
+          span.excursion-card__badge=card.duration
+      .excursion-card__content
+        h3.excursion-card__title=card.title
+        p.excursion-card__timetable
+          span #{card.days}:
+          | #{card.time}
+        ul.excursion-card__description-list
+          if card.descriptionList
+            each descriptionItem in card.descriptionList
+              li.excursion-card__description-item=descriptionItem
+        .excursion-card__price
+          span=card.price
+          a.button.button--accent(href=card.link) Подробнее
 
