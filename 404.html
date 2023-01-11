@@ -8,22 +8,7 @@
 <!-- шаблон прогресс-бара-->
 <!-- карточка партнера-->
 <!-- Карточка экскурсии (для слайдера)-->
-<!-- Карточка экскурсии (для слайдера)-->
-<!--mixin excursionsGrid (excursionData)-->
-<!--  each card in excursionData-->
-<!--    article.excursion-card-->
-<!--      .excursion-card__image-->
-<!--        img(src=card.imgSrc)-->
-<!--        .excursion-card__badges-->
-<!--          span.excursion-card__badge=card.duration-->
-<!--      .excursion-card__content-->
-<!--        h3.excursion-card__title=card.title-->
-<!--        p.excursion-card__timetable-->
-<!--          span #{card.days}:-->
-<!--          | #{card.time}-->
-<!--        .excursion-card__price-->
-<!--          span=card.price-->
-<!--          a.button.button--accent(href=card.link) Подробнее--><!DOCTYPE html>
+<!-- Карточка экскурсии (для слайдера)--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -143,8 +128,20 @@
       <main>
       </main>
       <footer class="footer">
-        <div class="container footer__container">
-          <h1>Footer</h1>
+        <div class="container footer__container"><a class="footer__logo" href="index.html"><img src="./assets/img/icons/logo-footer.svg"></a>
+          <div class="footer__contacts"><a class="footer__contacts-item" href="tel:+79111562004">
+              <svg width="35" height="35" fill="#ffcc00">
+                <use href="./assets/img/sprite.svg#phone"></use>
+              </svg>+7 (911) 156-20-04</a></div>
+          <div class="footer__social">
+            <ul class="footer__social-list">
+              <li class="footer__social-item"><a class="footer__social-link" href="##" style="background-image: url('./assets/img/icons/social/telegram.svg')"></a></li>
+              <li class="footer__social-item"><a class="footer__social-link" href="##" style="background-image: url('./assets/img/icons/social/vk.svg')"></a></li>
+              <li class="footer__social-item"><a class="footer__social-link" href="##" style="background-image: url('./assets/img/icons/social/instagram.svg')"></a><img class="footer__social-hint-icon" src="./assets/img/icons/important.svg"><span class="footer__social-hint-text"><span>#spbtravelgroup</span> — десятки тысяч фотографий путешественников.</span></li>
+              <li class="footer__social-item"><a class="footer__social-link" href="##" style="background-image: url('./assets/img/icons/social/whatsapp.svg')"></a></li>
+            </ul>
+          </div><a class="footer__policy" href="##">Политика конфиденциальности</a>
+          <p class="footer__copyright">&copy; 2016—<span></span> ООО «СПБ Тревел Групп». ИНН 7751177808 ОГРН 1207700095833 Номер в реестре Туроператоров РТО 022600 (Приказ № 38-Пр-21) изображения и текстов возможно только с указанием активной ссылки на сайт СПБ Тревел Групп.</p>
         </div>
       </footer>
     </div>

@@ -8,22 +8,7 @@
 <!-- шаблон прогресс-бара-->
 <!-- карточка партнера-->
 <!-- Карточка экскурсии (для слайдера)-->
-<!-- Карточка экскурсии (для слайдера)-->
-<!--mixin excursionsGrid (excursionData)-->
-<!--  each card in excursionData-->
-<!--    article.excursion-card-->
-<!--      .excursion-card__image-->
-<!--        img(src=card.imgSrc)-->
-<!--        .excursion-card__badges-->
-<!--          span.excursion-card__badge=card.duration-->
-<!--      .excursion-card__content-->
-<!--        h3.excursion-card__title=card.title-->
-<!--        p.excursion-card__timetable-->
-<!--          span #{card.days}:-->
-<!--          | #{card.time}-->
-<!--        .excursion-card__price-->
-<!--          span=card.price-->
-<!--          a.button.button--accent(href=card.link) Подробнее--><!DOCTYPE html>
+<!-- Карточка экскурсии (для слайдера)--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -143,23 +128,102 @@
       <main>
         <section class="section-column">
           <div class="excursion">
-            <div class="container">
-              <h2 class="title-section">Экскурсии на Новый Год и Рождество</h2>
-              <div class="excursion__slider-container">
-                <div class="excursion__slider-wrapper">
-                  <div class="excursion__list swiper-wrapper">
-                    <!--+excursionsSlider(excursionData)-->
+            <div class="container excursion__container">
+              <h2 class="title-section">Выберите вариант экскурсий</h2>
+              <div class="excursion__filter"></div>
+              <div class="excursion__grid">
+                <article class="excursion-card">
+                  <div class="excursion-card__image"><img src="https://thumb.tildacdn.com/tild6131-6164-4561-b331-663531303430/-/cover/700x470/center/center/-/format/webp/Yk7xoFRUTS2DgmArrGvy.jpg"/>
+                    <div class="excursion-card__badges"><span class="excursion-card__badge">3 часа</span></div>
                   </div>
-                  <div class="swiper-pagination"></div>
-                </div>
+                  <div class="excursion-card__content">
+                    <h3 class="excursion-card__title">Императорские и великокняжеские дворцы Санкт-Петербурга</h3>
+                    <p class="excursion-card__timetable"><span>вт, сб:</span>13:00</p>
+                    <ul class="excursion-card__description-list">
+                      <li class="excursion-card__description-item">Описание 1</li>
+                      <li class="excursion-card__description-item">Описание Описание 2</li>
+                      <li class="excursion-card__description-item">Описание 3</li>
+                    </ul>
+                    <div class="excursion-card__price"><span>1 500 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
+                  </div>
+                </article>
+                <article class="excursion-card">
+                  <div class="excursion-card__image"><img src="https://thumb.tildacdn.com/tild3938-3232-4336-b332-343663353738/-/cover/700x470/center/center/-/format/webp/qVt5TsyywpEXf6vpCwbn.jpg"/>
+                    <div class="excursion-card__badges"><span class="excursion-card__badge">1.5 часа</span></div>
+                  </div>
+                  <div class="excursion-card__content">
+                    <h3 class="excursion-card__title">Обзорная экскурсия по городу (автобусная или индивидуальная)</h3>
+                    <p class="excursion-card__timetable"><span>пн - вс:</span>10:00, 11:00, 12:00, 14:00, 15:00, 16:30, 17:00, 17:55</p>
+                    <ul class="excursion-card__description-list">
+                      <li class="excursion-card__description-item">Описание 1</li>
+                      <li class="excursion-card__description-item">Описание 2</li>
+                      <li class="excursion-card__description-item">Описание Описание 3</li>
+                    </ul>
+                    <div class="excursion-card__price"><span>700 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
+                  </div>
+                </article>
+                <article class="excursion-card">
+                  <div class="excursion-card__image"><img src="https://thumb.tildacdn.com/tild3730-6364-4063-b130-343965336234/-/cover/350x235/center/center/-/format/webp/m9tF8ucwVgMQHnQAwo9N.jpg"/>
+                    <div class="excursion-card__badges"><span class="excursion-card__badge">2.5-3 часа</span></div>
+                  </div>
+                  <div class="excursion-card__content">
+                    <h3 class="excursion-card__title">Обзорная экскурсия по городу с посещением Эрмитажа</h3>
+                    <p class="excursion-card__timetable"><span>пн - вс:</span>13:00, 16:00</p>
+                    <ul class="excursion-card__description-list">
+                      <li class="excursion-card__description-item">Описание Описание 1</li>
+                      <li class="excursion-card__description-item">Описание 2</li>
+                      <li class="excursion-card__description-item">Описание 3</li>
+                    </ul>
+                    <div class="excursion-card__price"><span>1 500 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
+                  </div>
+                </article>
+                <article class="excursion-card">
+                  <div class="excursion-card__image"><img src="https://thumb.tildacdn.com/tild3236-6239-4930-a532-616235663638/-/cover/350x235/center/center/-/format/webp/g1AQbFLkCWgYpvLybfee.jpg"/>
+                    <div class="excursion-card__badges"><span class="excursion-card__badge">2.5 часа</span></div>
+                  </div>
+                  <div class="excursion-card__content">
+                    <h3 class="excursion-card__title">Новогодняя сказка Петербурга</h3>
+                    <p class="excursion-card__timetable"><span>пн - вс:</span>18:00</p>
+                    <ul class="excursion-card__description-list">
+                      <li class="excursion-card__description-item">Описание Описание 1</li>
+                      <li class="excursion-card__description-item">Описание 2</li>
+                    </ul>
+                    <div class="excursion-card__price"><span>1 200 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
+                  </div>
+                </article>
+                <article class="excursion-card">
+                  <div class="excursion-card__image"><img src="https://thumb.tildacdn.com/tild3462-6431-4233-b332-366434303937/-/cover/350x235/center/center/-/format/webp/IMG_0856-min.JPG"/>
+                    <div class="excursion-card__badges"><span class="excursion-card__badge">2-2.5 часа</span></div>
+                  </div>
+                  <div class="excursion-card__content">
+                    <h3 class="excursion-card__title">Мифы и легенды города (автобусная или индивидуальная)</h3>
+                    <p class="excursion-card__timetable"><span>пн - вс:</span>13:00, 16:00</p>
+                    <ul class="excursion-card__description-list">
+                      <li class="excursion-card__description-item">Описание 1</li>
+                    </ul>
+                    <div class="excursion-card__price"><span>1 000 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
+                  </div>
+                </article>
               </div>
             </div>
           </div>
         </section>
       </main>
       <footer class="footer">
-        <div class="container footer__container">
-          <h1>Footer</h1>
+        <div class="container footer__container"><a class="footer__logo" href="index.html"><img src="./assets/img/icons/logo-footer.svg"></a>
+          <div class="footer__contacts"><a class="footer__contacts-item" href="tel:+79111562004">
+              <svg width="35" height="35" fill="#ffcc00">
+                <use href="./assets/img/sprite.svg#phone"></use>
+              </svg>+7 (911) 156-20-04</a></div>
+          <div class="footer__social">
+            <ul class="footer__social-list">
+              <li class="footer__social-item"><a class="footer__social-link" href="##" style="background-image: url('./assets/img/icons/social/telegram.svg')"></a></li>
+              <li class="footer__social-item"><a class="footer__social-link" href="##" style="background-image: url('./assets/img/icons/social/vk.svg')"></a></li>
+              <li class="footer__social-item"><a class="footer__social-link" href="##" style="background-image: url('./assets/img/icons/social/instagram.svg')"></a><img class="footer__social-hint-icon" src="./assets/img/icons/important.svg"><span class="footer__social-hint-text"><span>#spbtravelgroup</span> — десятки тысяч фотографий путешественников.</span></li>
+              <li class="footer__social-item"><a class="footer__social-link" href="##" style="background-image: url('./assets/img/icons/social/whatsapp.svg')"></a></li>
+            </ul>
+          </div><a class="footer__policy" href="##">Политика конфиденциальности</a>
+          <p class="footer__copyright">&copy; 2016—<span></span> ООО «СПБ Тревел Групп». ИНН 7751177808 ОГРН 1207700095833 Номер в реестре Туроператоров РТО 022600 (Приказ № 38-Пр-21) изображения и текстов возможно только с указанием активной ссылки на сайт СПБ Тревел Групп.</p>
         </div>
       </footer>
     </div>

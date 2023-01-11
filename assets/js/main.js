@@ -8,6 +8,7 @@ new Swiper('.excursion__slider-wrapper', {
 
   autoplay: {
     delay: 3000,
+    disableOnInteraction: false,
   },
 
   // Откл функционала, если слайдов меньше, чем нужно
@@ -32,7 +33,7 @@ new Swiper('.excursion__slider-wrapper', {
       slidesPerView: 1.2,
     },
     400: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.3,
     },
 
     500: {
@@ -54,6 +55,10 @@ new Swiper('.excursion__slider-wrapper', {
 });
 
 
+const footer = document.querySelector('.footer');
+const copyrightYear = footer.querySelector('.footer__copyright span');
+copyrightYear.textContent = new Date().getFullYear();
+
 const header = document.querySelector('header.header');
 
 if (header) {
@@ -70,10 +75,11 @@ if (header) {
   navItems.forEach(navItem => {
 
     navItem.addEventListener('click', () => {
-      navItem.classList.toggle('js-subnav-open')
-    })
+      navItem.classList.toggle('js-subnav-open');
+    });
 
-
+    const subnav = navItem.querySelector('.header__subnav');
+    (!subnav) ? navItem.classList.add('empty') : navItem.classList.remove('empty');
   })
 
 }
@@ -129,23 +135,30 @@ if (main) {
 
 const envlopeWrapper = document.querySelector('.envlope-wrapper');
 
-const envelope = envlopeWrapper.querySelector('#envelope');
-const btnOpen = document.querySelector('#open');
-const btnReset = document.querySelector('#reset');
+if (envlopeWrapper) {
+
+  const envelope = envlopeWrapper.querySelector('#envelope');
+  const btnOpen = document.querySelector('#open');
+  const btnReset = document.querySelector('#reset');
 
 
-envelope.addEventListener('click', open)
+
+  envelope.addEventListener('click', open)
 // btnOpen.addEventListener('click', open)
 // btnReset.addEventListener('click', close)
 
-function open () {
-  envelope.classList.remove('close');
-  envelope.classList.add('open')
-}
+  function open () {
+    envelope.classList.remove('close');
+    envelope.classList.add('open')
+  }
 
-function close () {
-  envelope.classList.remove('open')
-  envelope.classList.add('close');
+  function close () {
+    envelope.classList.remove('open')
+    envelope.classList.add('close');
+  }
+
+
+
 }
 
 {
@@ -254,5 +267,4 @@ function unblockScrollBody () {
 
 function toggleScrollBody () {
   html.classList.toggle(classBlockScroll);
-
 };
