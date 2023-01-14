@@ -1,0 +1,83 @@
+.feedback
+  @media (max-width: 768px)
+    margin-bottom: -50px
+    padding: 0
+
+  &__container
+    position: relative
+    padding: 20px 40px
+    background-color: $yellow
+    border-radius: 8px
+    @media (max-width: 768px)
+      padding-bottom: 0
+      text-align: center
+      &::after
+        content: ""
+        position: absolute
+        background-image: url('../img/icons/wave.svg')
+        width: 100%
+        height: 100px
+        bottom: 5px
+        left: 0
+        transform: translateY(100%)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        border-radius: 0 0 8px 8px
+
+  &__content
+    display: flex
+    gap: 40px
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+    @media (max-width: $width-mobile)
+      flex-direction: column
+    @media (max-width: 768px)
+      gap: 20px
+
+  p, span
+    @media (max-width: 768px)
+      font-size: 14px
+
+  &__form
+    background-color: #fff
+    padding: 20px
+    border-radius: 8px
+    width: fit-content
+    margin: 0 auto
+
+  &__form-container
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+  &__right
+    @media (min-width: $width-mobile)
+      width: 50%
+
+  &__left
+    @media (min-width: $width-mobile)
+      max-width: 50%
+
+  &__title
+    font-size: 28px
+    font-weight: 600
+    @media (max-width: 768px)
+      font-size: 22px
+
+  input
+    padding: 10px 20px
+    border-radius: 8px
+    border: 1px solid $black
+
+  hr
+    height: 1px
+    background-color: $black
+    margin-bottom: 10px
+    opacity: 0.2
+
+  &__personal-data
+    font-size: 14px
+    @media (max-width: 768px)
+      font-size: 12px

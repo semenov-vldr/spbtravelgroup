@@ -63,6 +63,9 @@ function init(name, arrType) {
     if (element === 'js') {
       fileHandler(name, 'js')
     }
+    if (element === 'php') {
+      fileHandler(name, 'php')
+    }
   });
 
 }

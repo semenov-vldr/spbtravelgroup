@@ -1,0 +1,57 @@
+form.form(action="./assets/form/form.php" method="POST" aria-hidden="true")
+  .form__container.container
+    h4.form__title Ваша запись на экскурсию
+    button.form__close &#10006;
+    .form__input-container
+      label Как к вам обращаться ?
+        input(placeholder="Ваше имя, фамилия" name="name" pattern="^[A-Za-zА-Яа-яЁё\\s]+$" autocomplete='off' maxlength='40' required )
+        //span.form__error.form__error--inputName Ошибка
+
+    .form__input-container
+      label Дата экскурсии
+        input.date(placeholder="дд.мм.гггг" type="date" name="date" autocomplete='off' maxlength='10' )
+        //span.form__error.form__error--inputDate
+
+    .form__input-container
+      label Формат экскурсии
+        select
+          option Групповой (в составе общей группы)
+          option Индивидуально (только Вы и гид)
+
+    .form__input-container
+      label Сколько у Вас человек?
+        select
+          option 1 чел
+          option 2 чел
+          option 3 чел
+          option 4 чел
+          option 5 чел
+          option 6 чел
+          option 7 чел
+          option 8 чел
+          option 9 чел
+          option 10 чел
+          option Более 10 чел.
+
+    .form__input-container
+      label Ориентировочное время?
+        input(type='time' name="time" form)
+
+    .form__input-container
+      label Телефон
+        input(type='tel' name='phone' placeholder="+0 000 000 00 00" data-tel-input pattern='.{18,}' maxlength='18'  autocomplete='off'  required)
+        //span.form__error.form__error--inputTel
+
+    .form__input-container
+      label Почта
+        input(type='email' name="email" maxlength='40' placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"  )
+        //span.form__error.form__error--inputEmail
+
+    .form__input-container
+      label Комментарий
+        textarea( placeholder="Введите ваше сообщение..." name="message" maxlength='200' rows="4")
+        //span.form__error.form__error--inputText
+
+    button.button.button--accent(type="submit") Отправить
+
+    p Нажатием на кнопку вы подтверждаете свою запись на экскурсию и обработку персональных данных в соответствии пользовательским соглашением.

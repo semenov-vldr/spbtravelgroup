@@ -1,0 +1,77 @@
+.form
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 20px
+  width: 100%
+  height: 100%
+  z-index: 99
+  overflow-y: auto
+  overflow-x: hidden
+  overscroll-behavior: contain
+  background-color: rgba(#000, 0.5)
+  opacity: 0
+  visibility: hidden
+  transition: $transition
+  -webkit-overflow-scrolling: touch
+  &.js-form-active
+    opacity: 1
+    visibility: visible
+
+
+  &__container
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: 12px
+    margin: auto
+    overflow: auto
+    min-width: 280px
+    max-width: 560px
+    min-height: 300px
+    background-color: #fff
+    border-radius: 8px
+    padding: 40px
+    box-sizing: border-box
+    @media (max-width: 768px)
+      padding: 20px
+
+  &__title
+    font-size: 24px
+    font-weight: 600
+
+  &__close
+    position: absolute
+    font-size: 24px
+    right: 40px
+    top: 20px
+    cursor: pointer
+    transition: $transition
+    &:hover
+      color: $yellow
+
+  &__input-container label
+    display: flex
+    flex-direction: column
+    gap: 4px
+
+  input,
+  select,
+  textarea
+    padding: 10px
+    width: 100%
+    border: 1px solid $black
+    background-color: transparent
+    border-radius: 2px
+    color: $black
+    &:focus
+      outline: none
+      border-color: $black
+    &:focus-visible
+      border-color: $black
+

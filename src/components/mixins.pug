@@ -63,7 +63,7 @@ mixin excursionsSlider (excursionData)
   each card in excursionData
     .swiper-slide
       article.excursion-card
-        .excursion-card__image
+        .excursion-card__image.open-form
           img(src=card.imgSrc)
           .excursion-card__badges
             span.excursion-card__badge=card.duration
