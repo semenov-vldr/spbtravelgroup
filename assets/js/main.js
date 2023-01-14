@@ -59,6 +59,35 @@ const footer = document.querySelector('.footer');
 const copyrightYear = footer.querySelector('.footer__copyright span');
 copyrightYear.textContent = new Date().getFullYear();
 
+const form = document.querySelector('.form');
+
+const openFormBtns = document.querySelectorAll('.open-form'); // элементы с этим классом открывают форму
+
+if (form && openFormBtns) {
+
+  const close = form.querySelector('.form__close');
+  close.addEventListener('click', closeForm);
+
+  openFormBtns.forEach(openFormBtn => {
+    openFormBtn.addEventListener('click', openForm)
+  })
+
+  function closeForm () {
+    form.classList.remove('js-form-active');
+  }
+
+  function openForm () {
+    form.classList.add('js-form-active');
+  }
+
+  document.addEventListener('click', (evt) => {
+    if(evt.target === form) closeForm();
+  })
+
+
+
+}
+
 const header = document.querySelector('header.header');
 
 if (header) {
@@ -268,3 +297,9 @@ function unblockScrollBody () {
 function toggleScrollBody () {
   html.classList.toggle(classBlockScroll);
 };
+
+fetch("./assets/json/data.json")
+  .then(res => res.json())
+  .then(data => {
+    data.forEach(dat => console.log(dat.name))
+  })

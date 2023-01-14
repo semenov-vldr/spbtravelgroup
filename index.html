@@ -127,6 +127,74 @@
       </header>
       <main>
         <section class="section-column">
+          <form class="form" action="./assets/form/form.php" method="POST" aria-hidden="true">
+            <div class="form__container container">
+              <h4 class="form__title">Ваша запись на экскурсию</h4>
+              <button class="form__close">&#10006;</button>
+              <div class="form__input-container">
+                <label>Как к вам обращаться ?
+                  <input placeholder="Ваше имя, фамилия" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required>
+                  <!--span.form__error.form__error--inputName Ошибка-->
+                </label>
+              </div>
+              <div class="form__input-container">
+                <label>Дата экскурсии
+                  <input class="date" placeholder="дд.мм.гггг" type="date" name="date" autocomplete="off" maxlength="10">
+                  <!--span.form__error.form__error--inputDate-->
+                </label>
+              </div>
+              <div class="form__input-container">
+                <label>Формат экскурсии
+                  <select>
+                    <option>Групповой (в составе общей группы)</option>
+                    <option>Индивидуально (только Вы и гид)</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form__input-container">
+                <label>Сколько у Вас человек?
+                  <select>
+                    <option>1 чел</option>
+                    <option>2 чел</option>
+                    <option>3 чел</option>
+                    <option>4 чел</option>
+                    <option>5 чел</option>
+                    <option>6 чел</option>
+                    <option>7 чел</option>
+                    <option>8 чел</option>
+                    <option>9 чел</option>
+                    <option>10 чел</option>
+                    <option>Более 10 чел.</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form__input-container">
+                <label>Ориентировочное время?
+                  <input type="time" name="time" form>
+                </label>
+              </div>
+              <div class="form__input-container">
+                <label>Телефон
+                  <input type="tel" name="phone" placeholder="+0 000 000 00 00" data-tel-input pattern=".{18,}" maxlength="18" autocomplete="off" required>
+                  <!--span.form__error.form__error--inputTel-->
+                </label>
+              </div>
+              <div class="form__input-container">
+                <label>Почта
+                  <input type="email" name="email" maxlength="40" placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
+                  <!--span.form__error.form__error--inputEmail-->
+                </label>
+              </div>
+              <div class="form__input-container">
+                <label>Комментарий
+                  <textarea placeholder="Введите ваше сообщение..." name="message" maxlength="200" rows="4"></textarea>
+                  <!--span.form__error.form__error--inputText-->
+                </label>
+              </div>
+              <button class="button button--accent" type="submit">Отправить</button>
+              <p>Нажатием на кнопку вы подтверждаете свою запись на экскурсию и обработку персональных данных в соответствии пользовательским соглашением.</p>
+            </div>
+          </form>
           <div class="hero-index">
             <div class="swiper-container main-slider loading">
               <div class="swiper-wrapper">
@@ -163,7 +231,7 @@
                   <div class="excursion__list swiper-wrapper">
                     <div class="swiper-slide">
                       <article class="excursion-card">
-                        <div class="excursion-card__image"><img src="https://thumb.tildacdn.com/tild6131-6164-4561-b331-663531303430/-/cover/700x470/center/center/-/format/webp/Yk7xoFRUTS2DgmArrGvy.jpg"/>
+                        <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild6131-6164-4561-b331-663531303430/-/cover/700x470/center/center/-/format/webp/Yk7xoFRUTS2DgmArrGvy.jpg"/>
                           <div class="excursion-card__badges"><span class="excursion-card__badge">3 часа</span></div>
                         </div>
                         <div class="excursion-card__content">
@@ -180,7 +248,7 @@
                     </div>
                     <div class="swiper-slide">
                       <article class="excursion-card">
-                        <div class="excursion-card__image"><img src="https://thumb.tildacdn.com/tild3938-3232-4336-b332-343663353738/-/cover/700x470/center/center/-/format/webp/qVt5TsyywpEXf6vpCwbn.jpg"/>
+                        <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3938-3232-4336-b332-343663353738/-/cover/700x470/center/center/-/format/webp/qVt5TsyywpEXf6vpCwbn.jpg"/>
                           <div class="excursion-card__badges"><span class="excursion-card__badge">1.5 часа</span></div>
                         </div>
                         <div class="excursion-card__content">
@@ -197,7 +265,7 @@
                     </div>
                     <div class="swiper-slide">
                       <article class="excursion-card">
-                        <div class="excursion-card__image"><img src="https://thumb.tildacdn.com/tild3730-6364-4063-b130-343965336234/-/cover/350x235/center/center/-/format/webp/m9tF8ucwVgMQHnQAwo9N.jpg"/>
+                        <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3730-6364-4063-b130-343965336234/-/cover/350x235/center/center/-/format/webp/m9tF8ucwVgMQHnQAwo9N.jpg"/>
                           <div class="excursion-card__badges"><span class="excursion-card__badge">2.5-3 часа</span></div>
                         </div>
                         <div class="excursion-card__content">
@@ -214,7 +282,7 @@
                     </div>
                     <div class="swiper-slide">
                       <article class="excursion-card">
-                        <div class="excursion-card__image"><img src="https://thumb.tildacdn.com/tild3236-6239-4930-a532-616235663638/-/cover/350x235/center/center/-/format/webp/g1AQbFLkCWgYpvLybfee.jpg"/>
+                        <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3236-6239-4930-a532-616235663638/-/cover/350x235/center/center/-/format/webp/g1AQbFLkCWgYpvLybfee.jpg"/>
                           <div class="excursion-card__badges"><span class="excursion-card__badge">2.5 часа</span></div>
                         </div>
                         <div class="excursion-card__content">
@@ -230,7 +298,7 @@
                     </div>
                     <div class="swiper-slide">
                       <article class="excursion-card">
-                        <div class="excursion-card__image"><img src="https://thumb.tildacdn.com/tild3462-6431-4233-b332-366434303937/-/cover/350x235/center/center/-/format/webp/IMG_0856-min.JPG"/>
+                        <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3462-6431-4233-b332-366434303937/-/cover/350x235/center/center/-/format/webp/IMG_0856-min.JPG"/>
                           <div class="excursion-card__badges"><span class="excursion-card__badge">2-2.5 часа</span></div>
                         </div>
                         <div class="excursion-card__content">
@@ -383,6 +451,26 @@
 </div>
             </div>
           </div>
+          <div class="feedback container">
+            <div class="feedback__container">
+              <div class="feedback__content">
+                <div class="feedback__left">
+                  <h2 class="feedback__title">Хватит искать! Просто закажите.</h2><span>Ваш отдых — это наша забота!</span>
+                  <p>Индивидуальный подход к туристам, гибкая ценовая политика, оперативность и качество.</p>
+                </div>
+                <div class="feedback__right">
+                  <form class="feedback__form">
+                    <div class="feedback__form-container">
+                      <input type="tel" placeholder="+7(___)___-__-__">
+                      <button class="button button--accent" type="submit">Заказать звонок</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <hr>
+              <p class="feedback__personal-data">Нажимая «Заказать звонок», вы даете согласие на <a href="##">обработку персональных данных</a> и принимаете условия пользовательского соглашения.</p>
+            </div>
+          </div>
         </section>
       </main>
       <footer class="footer">
@@ -399,7 +487,10 @@
               <li class="footer__social-item"><a class="footer__social-link" href="##" style="background-image: url('./assets/img/icons/social/whatsapp.svg')"></a></li>
             </ul>
           </div><a class="footer__policy" href="##">Политика конфиденциальности</a>
-          <p class="footer__copyright">&copy; 2016—<span></span> ООО «СПБ Тревел Групп». ИНН 7751177808 ОГРН 1207700095833 Номер в реестре Туроператоров РТО 022600 (Приказ № 38-Пр-21) изображения и текстов возможно только с указанием активной ссылки на сайт СПБ Тревел Групп.</p>
+          <p class="footer__copyright">&copy; 2016—<span></span> ООО «СПБ Тревел Групп». ИНН 7751177808 ОГРН 1207700095833 Номер в реестре Туроператоров РТО 022600 (Приказ № 38-Пр-21) изображения и текстов возможно только с указанием активной ссылки на сайт СПБ Тревел Групп.</p><script type="text/javascript" src="https://tourism.gov.ru/operators/widget/js/widget.js"></script>
+<!-- Russiatourism.ru Widget -->
+<div id="russiatourism_widget" style="background-color: #fc0"></div>
+<script type="text/javascript">RT.Widget.build('%D0%A0%D0%A2%D0%9E+022600');</script>
         </div>
       </footer>
     </div>
