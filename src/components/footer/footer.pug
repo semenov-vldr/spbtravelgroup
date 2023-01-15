@@ -4,31 +4,87 @@ footer.footer
       img(src="./assets/img/icons/logo-footer.svg")
 
     .footer__contacts
-      a.footer__contacts-item(href="tel:+79111562004")
-        svg(width="35" height="35" fill="#ffcc00")
+      .footer__social
+        ul.footer__social-list
+          li.footer__social-item
+            a.footer__social-link.footer__icon(href="##" title="telegram" style="background-image: url('./assets/img/icons/social/telegram.svg')")
+          li.footer__social-item
+            a.footer__social-link.footer__icon(href="##" title="vk" style="background-image: url('./assets/img/icons/social/vk.svg')")
+          li.footer__social-item
+            a.footer__social-link.footer__icon(href="##" title="instagram" style="background-image: url('./assets/img/icons/social/instagram.svg')")
+            img.footer__social-hint-icon(src="./assets/img/icons/important.svg")
+            span.footer__social-hint-text <span>#spbtravelgroup</span> — десятки тысяч фотографий путешественников.
+          li.footer__social-item
+            a.footer__social-link.footer__icon(href="##" title="whatsapp" style="background-image: url('./assets/img/icons/social/whatsapp.svg')")
+
+      a.footer__phone(href="tel:+79111562004")
+        svg.footer__icon(width="35" height="35" fill="#ffcc00")
           use(href='./assets/img/sprite.svg#phone')
         | +7 (911) 156-20-04
 
-    .footer__social
-      ul.footer__social-list
-        li.footer__social-item
-          a.footer__social-link(href="##" style="background-image: url('./assets/img/icons/social/telegram.svg')")
-        li.footer__social-item
-          a.footer__social-link(href="##" style="background-image: url('./assets/img/icons/social/vk.svg')")
-
-        li.footer__social-item
-          a.footer__social-link(href="##" style="background-image: url('./assets/img/icons/social/instagram.svg')")
-          img.footer__social-hint-icon(src="./assets/img/icons/important.svg")
-          span.footer__social-hint-text <span>#spbtravelgroup</span> — десятки тысяч фотографий путешественников.
-
-        li.footer__social-item
-          a.footer__social-link(href="##" style="background-image: url('./assets/img/icons/social/whatsapp.svg')")
+      button.footer__question
+       img.footer__icon(src="./assets/img/icons/write.svg" width="30px")
+       | Задать вопрос
 
 
-    a.footer__policy(href="##") Политика конфиденциальности
-    p.footer__copyright &copy; 2016—<span></span> ООО «СПБ Тревел Групп». ИНН 7751177808 ОГРН 1207700095833 Номер в реестре Туроператоров РТО 022600 (Приказ № 38-Пр-21) изображения и текстов возможно только с указанием активной ссылки на сайт СПБ Тревел Групп.
+    nav.footer__nav.footer__nav--1
+      ul.footer__nav-list
+        li.footer__nav-item
+          a.footer__nav-link(href="") Индивидуальные
+        li.footer__nav-item
+          a.footer__nav-link(href="") Обзорные по городу
+        li.footer__nav-item
+          a.footer__nav-link(href="") Пригороды
+        li.footer__nav-item
+          a.footer__nav-link(href="") По крышам
+        li.footer__nav-item
+          a.footer__nav-link(href="") Парадные и дворы
+        li.footer__nav-item
+          a.footer__nav-link(href="") Водные прогулки
+        li.footer__nav-item
+          a.footer__nav-link(href="") Пешеходные экскурсии, квесты
+        li.footer__nav-item
+          a.footer__nav-link(href="") Ночные и вечерние по огороду
+
+
+    nav.footer__nav.footer__nav--2
+      ul.footer__nav-list
+        li.footer__nav-item
+          a.footer__nav-link(href="") Авторские и тематические
+        li.footer__nav-item
+          a.footer__nav-link(href="") Свидание на крыше
+        li.footer__nav-item
+          a.footer__nav-link(href="") Фотосессии на крыше
+        li.footer__nav-item
+          a.footer__nav-link(href="") Аренда катеров и яхт
+        li.footer__nav-item
+          a.footer__nav-link(href="") Ночные водные экскурсии <br> под развод мостов
+        li.footer__nav-item
+          a.footer__nav-link(href="") Полет-свидание на самолете
+        li.footer__nav-item
+          a.footer__nav-link(href="") Салют с крыши
+
+
+    nav.footer__nav.footer__nav--contacts
+      ul.footer__nav-list
+        li.footer__nav-item.mobile-visible
+          a.footer__nav-link(href="index.html#excursions") Экскурсии
+        li.footer__nav-item
+          a.footer__nav-link(href="") Контакты
+        li.footer__nav-item
+          a.footer__nav-link(href="") Расчет тура
+        li.footer__nav-item
+          a.footer__nav-link(href="") Оплата и возврат
+        li.footer__nav-item
+          a.footer__nav-link(href="") Отзывы #spbtravelgroup
+        li.footer__nav-item
+          a.footer__nav-link(href="") Расчет тура
+
+
+    .footer__bottom
+      p.footer__copyright &copy; ООО «СПБ Тревел Групп», 2016—<span></span>
+      a.footer__policy(href="##") Политика конфиденциальности
 
     <script type="text/javascript" src="https://tourism.gov.ru/operators/widget/js/widget.js"></script>
-    <!-- Russiatourism.ru Widget -->
     <div id="russiatourism_widget" style="background-color: #fc0"></div>
     <script type="text/javascript">RT.Widget.build('%D0%A0%D0%A2%D0%9E+022600');</script>

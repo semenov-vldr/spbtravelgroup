@@ -1,30 +1,65 @@
 .footer
   background-color: $black
-  padding: 20px 0
+  padding: 30px 0
   color: #fff
   @media (max-width: 768px)
     padding: 120px 0 20px
 
   &__container
-    display: flex
-    flex-direction: column
-    gap: 12px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 32px
     & > *
       width: fit-content
+    a
+      transition: $transition
+    @media (max-width: $width-mobile)
+      grid-template-columns: repeat(2, 1fr)
+    @media (max-width: 768px)
+      grid-template-columns: 1fr
+
+
+  &__logo
+    grid-column: 1 / span 1
+
 
   &__logo img
     width: 250px
 
-  &__contacts-item
+  &__contacts
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    align-self: center
+    gap: 40px
+    grid-column: 2 / span 2
+    width: 100%
+    @media (max-width: $width-mobile)
+      grid-column: 1 / -1
+      grid-row: 2
+      justify-content: flex-start
+    @media (max-width: 768px)
+      row-gap: 24px
+      flex-wrap: wrap
+
+
+  &__phone
     display: flex
     align-items: center
     gap: 8px
+    font-weight: 500
+    white-space: nowrap
+    &:hover
+      color: $yellow
 
+  &__social
+    grid-column: 1 / span 1
 
   &__social-list
     display: flex
-    gap: 12px
+    gap: 22px
     align-items: center
+    justify-content: space-between
 
   &__social-item
     position: relative
@@ -34,8 +69,18 @@
     background-size: cover
     background-position: center
     background-repeat: no-repeat
+    //width: 30px
+    //height: 30px
+
+  &__icon
     width: 30px
     height: 30px
+    aspect-ratio: 1 / 1
+    @media (max-width: 768px)
+      width: 35px
+      height: 35px
+
+
 
   &__social-hint-icon
     width: 12px
@@ -67,6 +112,79 @@
     span
       color: $yellow
 
-  &__copyright,
+  &__question
+    font-weight: 500
+    font-size: 17px
+    cursor: pointer
+    white-space: nowrap
+    display: flex
+    align-items: center
+    gap: 8px
+    &:hover
+      color: $yellow
+
+  &__nav
+    grid-row: 2
+    &--1
+      grid-column: 1
+    &--2
+      grid-column: 2
+    @media (max-width: $width-mobile)
+      grid-row: 3
+    @media (max-width: 768px)
+      &--1,
+      &--2
+        display: none
+
+
+  &__nav--contacts
+    grid-column: 3
+    @media (max-width: $width-mobile)
+      grid-row: 4
+      grid-column: 1
+    @media (max-width: 768px)
+      grid-row: 3
+
+  &__nav-list
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+  &__nav-link
+    &:hover
+      color: $yellow
+
+  &__bottom
+    font-size: 14px
+    display: flex
+    gap: 40px
+    grid-column: span 2
+    align-self: flex-end
+    @media (max-width: $width-mobile)
+      flex-direction: column
+      gap: 12px
+      grid-column: span 1
+      font-size: 12px
+      grid-row: 5
+      @media (max-width: 768px)
+        grid-row: 4
+        margin-top: 30px
+
+  &__copyright
+    opacity: 0.5
+
   &__policy
-    font-size: 12px
+    opacity: 0.5
+    text-decoration: underline
+    &:hover
+      opacity: 1
+
+  #russiatourism_widget
+    grid-column: 3 / span 1
+    justify-self: end
+    height: fit-content
+    @media (max-width: $width-mobile)
+      grid-column: 1
+      grid-row: 5
+      justify-self: start
+
