@@ -2,27 +2,104 @@
   .filter__container.container
     h2.title-section Фильтр экскурсий
 
-    ul.filter__tabs
-      li.filter__tabs-item.js-filter-tabs-active Все <span class="filter__count">80</span>
-      li.filter__tabs-item Обзорные
-      li.filter__tabs-item В пригороды
-      li.filter__tabs-item Пешеходные
-      li.filter__tabs-item Музеи
-      li.filter__tabs-item Крепости
-      li.filter__tabs-item Дворцы
-      li.filter__tabs-item На теплоходе
-      li.filter__tabs-item Водные
-      li.filter__tabs-item По крышам
-      li.filter__tabs-item По парадным и дворам
-      li.filter__tabs-item Школьникам
-      li.filter__tabs-item Вечерние
-      li.filter__tabs-item Ночные
-      li.filter__tabs-item Фотосессии
-      li.filter__tabs-item Квесты
-      li.filter__tabs-item Свидания
-      li.filter__tabs-item Развод мостов
-      li.filter__tabs-item На самолете
+    .filter__body
+      .filter__tabs
+        ul.filter__tabs-list
+          li.filter__tabs-item.js-filter-tabs-active Все <span class="filter__count">80</span>
+          li.filter__tabs-item Обзорные
+          li.filter__tabs-item В пригороды
+          li.filter__tabs-item Пешеходные
+          li.filter__tabs-item Музеи
+          li.filter__tabs-item Крепости
+          li.filter__tabs-item Дворцы
+          li.filter__tabs-item На теплоходе
+          li.filter__tabs-item Водные
+          li.filter__tabs-item По крышам
+          li.filter__tabs-item По парадным и дворам
+          li.filter__tabs-item Школьникам
+          li.filter__tabs-item Вечерние
+          li.filter__tabs-item Ночные
+          li.filter__tabs-item Фотосессии
+          li.filter__tabs-item Квесты
+          li.filter__tabs-item Свидания
+          li.filter__tabs-item Развод мостов
+          li.filter__tabs-item На самолете
 
-      li.filter__tabs-item--more •••
+          li.filter__tabs-item--more •••
+
+
+      ul.filter__bottom
+        li.filter__bottom-item ТОП 10
+        li.filter__bottom-item Групповые
+        li.filter__bottom-item Индивидуальные
+
+        li.filter__bottom-item.filter__bottom-item--all-tags
+          include ../../../img/icons/settings.svg
+          span Все теги
+
+        .filter__all-tags
+          button.filter__all-tags-close &#10006;
+          .filter__all-tags-body
+            span.filter__all-tags-title Тип экскурсий
+            ul.filter__all-tags-list
+
+              li.filter__all-tags-item
+                label
+                  input(type="checkbox" name="Тип экскурсий" value="Все")
+                  span Все
+
+              li.filter__all-tags-item
+                label
+                  input(type="checkbox" name="Тип экскурсий" value="Индивидуальные")
+                  span Индивидуальные
+
+              li.filter__all-tags-item
+                label
+                  input(type="checkbox" name="Тип экскурсий" value="Групповые")
+                  span Групповые
+
+          .filter__all-tags-body
+            span.filter__all-tags-title Способ передвижения
+            ul.filter__all-tags-list
+
+              li.filter__all-tags-item
+                label
+                  input(type="checkbox" name="Способ передвижения" value="Любой")
+                  span Любой
+
+              li.filter__all-tags-item
+                label
+                  input(type="checkbox" name="Способ передвижения" value="Пешком")
+                  span Пешком
+
+              li.filter__all-tags-item
+                label
+                  input(type="checkbox" name="Способ передвижения" value="На автобусе")
+                  span На автобусе
+
+              li.filter__all-tags-item
+                label
+                  input(type="checkbox" name="Способ передвижения" value="На машине")
+                  span На машине
+
+              li.filter__all-tags-item
+                label
+                  input(type="checkbox" name="Способ передвижения" value="На кораблике")
+                  span На кораблике
+
+              li.filter__all-tags-item
+                label
+                  input(type="checkbox" name="Способ передвижения" value="На катере, яхте")
+                  span На катере, яхте
+
+              li.filter__all-tags-item
+                label
+                  input(type="checkbox" name="Способ передвижения" value="На самолете")
+                  span На самолете
+
+
+
+
+
 
 
