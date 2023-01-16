@@ -78,6 +78,7 @@ if (filter) {
   if (filterItemsLength < startItems + 1) showMore.classList.add('hidden');
 
 
+
   filterItems.forEach(filterItem => {
     filterItem.addEventListener('click', () => {
 
@@ -86,6 +87,25 @@ if (filter) {
       filterItem.classList.add('js-filter-tabs-active');
     })
   })
+
+
+
+
+  const filterBottomItemAllTags = filter.querySelector('.filter__bottom-item--all-tags');
+
+  filterBottomItemAllTags.addEventListener('click', () => {
+    filterBottomItemAllTags.classList.toggle('js-all-tags-active');
+  });
+
+  document.addEventListener('click', (evt) => {
+    console.log(evt.target)
+  })
+
+const closeAllTags = filter.querySelector('.filter__all-tags-close');
+  closeAllTags.addEventListener('click', () => {
+    filterBottomItemAllTags.classList.remove('js-all-tags-active');
+  })
+
 
 }
 
