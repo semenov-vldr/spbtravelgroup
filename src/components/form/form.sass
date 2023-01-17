@@ -22,6 +22,8 @@
   &.js-form-active
     opacity: 1
     visibility: visible
+  @media (max-width: 480px)
+    padding: 0
 
 
   &__container
@@ -40,10 +42,16 @@
     box-sizing: border-box
     @media (max-width: 768px)
       padding: 20px
+    @media (max-width: 480px)
+      border-radius: 0
 
   &__title
     font-size: 24px
     font-weight: 600
+    margin-bottom: 30px
+    @media (max-width: 480px)
+      margin-top: 50px
+      font-size: 20px
 
   &__close
     position: absolute
@@ -52,8 +60,32 @@
     top: 20px
     cursor: pointer
     transition: $transition
-    &:hover
-      color: $yellow
+    @media (min-width: 480px)
+      svg
+        background-color: #c4c4c4
+        padding: 5px
+        border-radius: 50%
+        fill: #fff
+        box-sizing: content-box
+    @media (max-width: 768px)
+      right: 20px
+    &:hover svg
+      fill: $yellow
+    @media (max-width: 480px)
+      position: fixed
+      top: 0
+      right: 0
+      left: 0
+      padding: 10px 20px
+      color: #fff
+      background-color: $black
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      svg
+        fill: #fff
+
 
   &__input-container label
     display: flex
@@ -69,9 +101,19 @@
     background-color: transparent
     border-radius: 2px
     color: $black
+    min-height: 44px
     &:focus
       outline: none
       border-color: $black
     &:focus-visible
       border-color: $black
+
+  button
+    padding: 12px
+
+  p
+    font-size: 14px
+    text-align: center
+    @media (max-width: 768px)
+      font-size: 12px
 
