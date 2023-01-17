@@ -1,0 +1,57 @@
+.how-we-work
+
+  &__list
+    position: relative
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 20px
+    @media (max-width: $width-mobile)
+      grid-template-columns: 1fr
+      &::before
+        content: ""
+        position: absolute
+        width: 2px
+        height: 77%
+        left: 22px
+        top: 50%
+        transform: translateY(-50%)
+        background-color: $yellow
+        z-index: -1
+
+
+  &__item
+    display: grid
+    grid-template-columns: 60px auto
+    align-items: center
+    gap: 8px 16px
+    height: fit-content
+
+  &__item-title
+    font-weight: 600
+    font-size: 20px
+    grid-column: 2 / span 1
+    &::first-letter
+      color: $yellow
+      margin-right: 4px
+    @media (max-width: $width-mobile)
+      font-size: 16px
+
+
+  &__item-icon
+    width: 32px
+    height: 32px
+    background-color: $yellow
+    padding: 10px
+    box-sizing: content-box
+    border-radius: 50%
+    grid-column: 1
+    grid-row: span 2
+    @media (max-width: $width-mobile)
+      width: 24px
+      height: 24px
+
+  &__item-text
+    font-size: 16px
+    grid-column: 2 / span 1
+    @media (max-width: $width-mobile)
+      font-size: 14px
