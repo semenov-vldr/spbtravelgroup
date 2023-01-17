@@ -24,6 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
 <!-- Yandex map script -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=dad86943-dfef-45bd-9c5e-c404323cb093&amp;lang=ru_RU" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="page">
@@ -92,64 +93,73 @@
       </header>
       <main>
         <section class="section-column">
-          <form class="form" action="./assets/form/form.php" method="POST" aria-hidden="true">
+          <form class="form" action="" method="POST" aria-hidden="true">
             <div class="form__container container">
               <h4 class="form__title">Ваша запись на экскурсию</h4>
               <button class="form__close">&#10006;</button>
+              <!-- Имя-->
               <div class="form__input-container">
                 <label>Как к вам обращаться ?
-                  <input placeholder="Ваше имя, фамилия" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40" required>
+                  <input placeholder="Ваше имя, фамилия" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40">
                   <!--span.form__error.form__error--inputName Ошибка-->
                 </label>
               </div>
+              <!-- Дата-->
               <div class="form__input-container">
                 <label>Дата экскурсии
                   <input class="date" placeholder="дд.мм.гггг" type="date" name="date" autocomplete="off" maxlength="10">
                   <!--span.form__error.form__error--inputDate-->
                 </label>
               </div>
+              <!-- Формат-->
               <div class="form__input-container">
                 <label>Формат экскурсии
-                  <select>
-                    <option>Групповой (в составе общей группы)</option>
-                    <option>Индивидуально (только Вы и гид)</option>
+                  <select class="form__input-format">
+                    <option value="Выберите формат экскурсии">Выберите формат экскурсии</option>
+                    <option value="Групповой">Групповой (в составе общей группы)</option>
+                    <option value="Индивидуально">Индивидуально (только Вы и гид)</option>
                   </select>
                 </label>
               </div>
+              <!-- Кол-во человек-->
               <div class="form__input-container">
                 <label>Сколько у Вас человек?
-                  <select>
-                    <option>1 чел</option>
-                    <option>2 чел</option>
-                    <option>3 чел</option>
-                    <option>4 чел</option>
-                    <option>5 чел</option>
-                    <option>6 чел</option>
-                    <option>7 чел</option>
-                    <option>8 чел</option>
-                    <option>9 чел</option>
-                    <option>10 чел</option>
-                    <option>Более 10 чел.</option>
+                  <select class="form__input-count-people">
+                    <option value="1">1 чел</option>
+                    <option value="2">2 чел</option>
+                    <option value="3">3 чел</option>
+                    <option value="4">4 чел</option>
+                    <option value="5">5 чел</option>
+                    <option value="6">6 чел</option>
+                    <option value="7">7 чел</option>
+                    <option value="8">8 чел</option>
+                    <option value="9">9 чел</option>
+                    <option value="10">10 чел</option>
+                    <option value="Более 10">Более 10 чел.</option>
                   </select>
                 </label>
               </div>
+              <!-- Время-->
               <div class="form__input-container">
                 <label>Ориентировочное время?
-                  <input type="time" name="time" form>
+                  <input name="time">
                 </label>
               </div>
+              <!-- Телефон-->
               <div class="form__input-container">
                 <label>Телефон
-                  <input type="tel" name="phone" placeholder="+0 000 000 00 00" data-tel-input pattern=".{18,}" maxlength="18" autocomplete="off" required>
+                  <input type="tel" name="phone" placeholder="+0 000 000 00 00" data-tel-input pattern=".{18,}" maxlength="18" autocomplete="off">
                   <!--span.form__error.form__error--inputTel-->
                 </label>
               </div>
+              <!-- Почта-->
               <div class="form__input-container">
                 <label>Почта
                   <input type="email" name="email" maxlength="40" placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
                   <!--span.form__error.form__error--inputEmail-->
                 </label>
               </div>
+              <!-- Комментарий-->
               <div class="form__input-container">
                 <label>Комментарий
                   <textarea placeholder="Введите ваше сообщение..." name="message" maxlength="200" rows="4"></textarea>
@@ -287,13 +297,13 @@
               <section class="catalog__section">
                 <h2 class="catalog__section-title title-section">Заголовок 1</h2>
                 <ul class="catalog__section-list catalog__section-list--3categ">
-                  <li class="catalog__section-item"><a href="bright holiday.html">
+                  <li class="catalog__section-item"><a href="bright-holiday.html">
                       <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3361-6637-4630-b330-333637363065/-/resize/300x400/-/format/webp/Xp9zpOH6y_9p9aDRE43H.png)"></div>
                       <h3>Яркий отдых в Санкт-Петербурге 2023</h3></a></li>
-                  <li class="catalog__section-item"><a href="bright holiday.html">
+                  <li class="catalog__section-item"><a href="bright-holiday.html">
                       <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3061-3565-4161-b137-383730643963/-/resize/300x400/-/format/webp/a8e3e02a-644f-11ea-a.jpg)"></div>
                       <h3>Индивидуальные экскурсии</h3></a></li>
-                  <li class="catalog__section-item"><a href="bright holiday.html">
+                  <li class="catalog__section-item"><a href="bright-holiday.html">
                       <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3438-3839-4534-b564-303235343563/-/resize/300x400/-/format/webp/obzornye-home.jpg)"></div>
                       <h3>Обзорные экскурсии по городу</h3></a></li>
                 </ul>

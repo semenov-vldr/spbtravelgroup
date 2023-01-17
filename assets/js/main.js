@@ -55,12 +55,14 @@ new Swiper('.excursion__slider-wrapper', {
 });
 
 
-// Показать больше
+
 const filter = document.querySelector('.filter');
 
 const widthMobile = window.matchMedia('(max-width: 768px)').matches;
 
 if (filter) {
+
+  // Показать больше
   const showMore = filter.querySelector('.filter__tabs-item--more');
 
   let startItems;
@@ -73,38 +75,33 @@ if (filter) {
   showMore.addEventListener('click', () => {
     filterItems.forEach(el => el.classList.add('js-visible'));
     showMore.classList.add('hidden');
-  })
+  });
 
   if (filterItemsLength < startItems + 1) showMore.classList.add('hidden');
 
 
 
+
   filterItems.forEach(filterItem => {
     filterItem.addEventListener('click', () => {
-
       filterItems.forEach(item => item.classList.remove('js-filter-tabs-active'))
-
       filterItem.classList.add('js-filter-tabs-active');
     })
-  })
+  });
 
 
 
-
+  // Все теги
   const filterBottomItemAllTags = filter.querySelector('.filter__bottom-item--all-tags');
 
   filterBottomItemAllTags.addEventListener('click', () => {
     filterBottomItemAllTags.classList.toggle('js-all-tags-active');
   });
 
-  document.addEventListener('click', (evt) => {
-    console.log(evt.target)
-  })
-
-const closeAllTags = filter.querySelector('.filter__all-tags-close');
+  const closeAllTags = filter.querySelector('.filter__all-tags-close');
   closeAllTags.addEventListener('click', () => {
     filterBottomItemAllTags.classList.remove('js-all-tags-active');
-  })
+  });
 
 
 }
@@ -115,30 +112,89 @@ const footer = document.querySelector('.footer');
 const copyrightYear = footer.querySelector('.footer__copyright span');
 copyrightYear.textContent = new Date().getFullYear();
 
-const form = document.querySelector('.form');
+{
 
-const openFormBtns = document.querySelectorAll('.open-form'); // элементы с этим классом открывают форму
+  const form = document.querySelector('.form');
 
-if (form && openFormBtns) {
+  const openFormBtns = document.querySelectorAll('.open-form'); // элементы с этим классом открывают форму
 
-  const close = form.querySelector('.form__close');
-  close.addEventListener('click', closeForm);
+  if (form && openFormBtns) openForm(form, openFormBtns);
 
-  openFormBtns.forEach(openFormBtn => {
-    openFormBtn.addEventListener('click', openForm)
-  })
+  function openForm (form, openFormBtns) {
+    const close = form.querySelector('.form__close');
+    close.addEventListener('click', hiddenForm);
 
-  function closeForm () {
-    form.classList.remove('js-form-active');
+    openFormBtns.forEach(openFormBtn => {
+      openFormBtn.addEventListener('click', visibleForm)
+    })
+
+    function hiddenForm () {
+      form.classList.remove('js-form-active');
+      form.reset();
+    }
+
+    function visibleForm () {
+      form.classList.add('js-form-active');
+    }
+
+    document.addEventListener('click', (evt) => {
+      if(evt.target === form) hiddenForm();
+    })
+  };
+
+
+}
+
+
+
+
+{
+
+  const form = document.querySelector('.form');
+
+
+
+
+  const TOKEN = "5732348131:AAEbsunpaRPrWO8jc7tO_UCcSNOEDLWTqyw";
+  const CHAT_ID = "-623808828";
+  const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
+
+
+  form.addEventListener('submit', sendMsgTelegram );
+
+  function sendMsgTelegram (evt) {
+    evt.preventDefault();
+
+    let message = `<b>Заявка с сайта SPB</b>\n`;
+
+    message += `<b>Имя отправителя</b> ${ this.name.value }\n`;
+    message += `<b>Дата</b> ${ this.date.value }\n`;
+    message += `<b>Время</b> ${ this.time.value }\n`;
+    message += `<b>Формат</b> ${ this.querySelector('.form__input-format').value }\n`;
+    message += `<b>Кол-во чел</b> ${ this.querySelector('.form__input-count-people').value }\n`;
+    message += `<b>Телефон</b> ${ this.phone.value }\n`;
+    message += `<b>Почта</b> ${ this.email.value }\n`;
+    message += `<b>Сообщение</b> ${ this.message.value }\n`;
+
+
+    axios.post(URL_API, {
+      chat_id: CHAT_ID,
+      parse_mode: 'html',
+      text: message,
+    })
+      .then((res) => {
+        this.name.value = "";
+        this.email.value = "";
+        console.log('Заявка успешно отправлена');
+      })
+      .catch((err) => {
+        console.warn(err)
+      })
+      .finally(() => {
+        console.log('Конец');
+      })
+
   }
-
-  function openForm () {
-    form.classList.add('js-form-active');
-  }
-
-  document.addEventListener('click', (evt) => {
-    if(evt.target === form) closeForm();
-  })
 
 
 
@@ -358,5 +414,5 @@ function toggleScrollBody () {
 fetch("./assets/json/data.json")
   .then(res => res.json())
   .then(data => {
-    data.forEach(dat => console.log(dat.name))
+    //data.forEach(dat => console.log(dat.name))
   })
