@@ -152,7 +152,9 @@ copyrightYear.textContent = new Date().getFullYear();
 
   const form = document.querySelector('.form');
 
-
+  if (form) {
+    form.addEventListener('submit', sendMsgTelegram );
+  }
 
 
   const TOKEN = "5732348131:AAEbsunpaRPrWO8jc7tO_UCcSNOEDLWTqyw";
@@ -160,7 +162,7 @@ copyrightYear.textContent = new Date().getFullYear();
   const URL_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
 
 
-  form.addEventListener('submit', sendMsgTelegram );
+
 
   function sendMsgTelegram (evt) {
     evt.preventDefault();
@@ -193,8 +195,7 @@ copyrightYear.textContent = new Date().getFullYear();
       .finally(() => {
         console.log('Конец');
       })
-
-  }
+  };
 
 
 
