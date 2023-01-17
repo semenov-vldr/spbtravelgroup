@@ -1,28 +1,35 @@
-const form = document.querySelector('.form');
+{
 
-const openFormBtns = document.querySelectorAll('.open-form'); // элементы с этим классом открывают форму
+  const form = document.querySelector('.form');
 
-if (form && openFormBtns) {
+  const openFormBtns = document.querySelectorAll('.open-form'); // элементы с этим классом открывают форму
 
-  const close = form.querySelector('.form__close');
-  close.addEventListener('click', closeForm);
+  if (form && openFormBtns) openForm(form, openFormBtns);
 
-  openFormBtns.forEach(openFormBtn => {
-    openFormBtn.addEventListener('click', openForm)
-  })
+  function openForm (form, openFormBtns) {
+    const close = form.querySelector('.form__close');
+    close.addEventListener('click', hiddenForm);
 
-  function closeForm () {
-    form.classList.remove('js-form-active');
-  }
+    openFormBtns.forEach(openFormBtn => {
+      openFormBtn.addEventListener('click', visibleForm)
+    })
 
-  function openForm () {
-    form.classList.add('js-form-active');
-  }
+    function hiddenForm () {
+      form.classList.remove('js-form-active');
+      form.reset();
+    }
 
-  document.addEventListener('click', (evt) => {
-    if(evt.target === form) closeForm();
-  })
+    function visibleForm () {
+      form.classList.add('js-form-active');
+    }
 
+    document.addEventListener('click', (evt) => {
+      if(evt.target === form) hiddenForm();
+    })
+  };
 
 
 }
+
+
+
