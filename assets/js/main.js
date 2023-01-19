@@ -438,19 +438,15 @@ function createExcursionCard (item) {
 
   const cardItem = cardTemplate.cloneNode(true);
 
-
-
-  function isImage(src) {
-    let resultCheck = true;
-    let image = cardItem.querySelector('.excursion-card__image img');
-    image.src = src;
-    image.onerror = function () {
-      resultCheck = false;
-    };
-    return resultCheck;
-  };
-
-
+  // function isImage(src) {
+  //   let resultCheck = true;
+  //   let image = cardItem.querySelector('.excursion-card__image img');
+  //   image.src = src;
+  //   image.onerror = function () {
+  //     resultCheck = false;
+  //   };
+  //   return resultCheck;
+  // };
 
 
   if (!item.srcImg) {
@@ -476,10 +472,7 @@ function createExcursionCard (item) {
     descriptionList.appendChild(li);
   });
 
-  if (excursionGrid) {
-    excursionGrid.appendChild(cardItem);
-  }
-
+  if (excursionGrid) excursionGrid.appendChild(cardItem);
 
 
 
