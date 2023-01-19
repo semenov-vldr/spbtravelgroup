@@ -8,7 +8,7 @@
 <!-- шаблон прогресс-бара-->
 <!-- карточка партнера-->
 <!-- Карточка экскурсии (для слайдера)-->
-<!-- Карточка экскурсии (для слайдера)--><!DOCTYPE html>
+<!-- Карточка экскурсии--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
@@ -525,12 +525,28 @@
             </ul>
           </nav>
           <div class="footer__bottom">
-            <p class="footer__copyright">&copy; ООО «СПБ Тревел Групп», 2016—<span></span></p><a class="footer__policy" href="##">Политика конфиденциальности</a>
-          </div><script type="text/javascript" src="https://tourism.gov.ru/operators/widget/js/widget.js"></script>
-<div id="russiatourism_widget" style="background-color: #fc0"></div>
-<script type="text/javascript">RT.Widget.build('%D0%A0%D0%A2%D0%9E+022600');</script>
+            <p class="footer__copyright">&copy; ООО «СПБ Тревел Групп», 2016—<span></span></p><a class="footer__policy" href="##">Политика конфиденциальности</a><a class="footer__registry" href="##"><img src="./assets/img/icons/gerb.svg">
+              <div class="footer__registry-text">
+                <p class="footer__registry-title">Мы в реестре туроператоров</p><span class="footer__registry-desc">ООО "СПБ ТРЕВЕЛ ГРУПП" РТО 022600</span>
+              </div></a>
+          </div>
         </div>
       </footer>
+      <template id="card">
+        <article class="excursion-card">
+          <div class="excursion-card__image"><img src="">
+            <div class="excursion-card__badges"><span class="excursion-card__badge">2.5-3 часа</span></div>
+          </div>
+          <div class="excursion-card__content">
+            <h3 class="excursion-card__title">Обзорная экскурсия по городу с посещением Эрмитажа</h3>
+            <p class="excursion-card__timetable"><span class="excursion-card__timetable-days">пн - вс:</span><span class="excursion-card__timetable-time">13:00, 16:00</span></p>
+            <ul class="excursion-card__description-list">
+              <!--li.excursion-card__description-item Описание 1-->
+            </ul>
+            <div class="excursion-card__price"><span>1 500 ₽</span><a class="button button--accent" href="">Подробнее</a></div>
+          </div>
+        </article>
+      </template>
     </div>
     <script src="assets/js/libs.min.js"></script>
     <script src="assets/js/main.js" type="module"></script>
