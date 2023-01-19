@@ -451,9 +451,6 @@ function createExcursionCard (item) {
   };
 
 
-  console.log(isImage(item.srcImg))
-
-
 
 
   if (!item.srcImg) {
@@ -479,7 +476,12 @@ function createExcursionCard (item) {
     descriptionList.appendChild(li);
   });
 
-  excursionGrid.appendChild(cardItem);
+  if (excursionGrid) {
+    excursionGrid.appendChild(cardItem);
+  }
+
+
+
 
   return cardItem;
 
