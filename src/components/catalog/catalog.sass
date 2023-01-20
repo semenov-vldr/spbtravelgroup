@@ -15,9 +15,9 @@
       @media (max-width: 768px)
         grid-gap: 12px
       @media (max-width: 550px)
-        grid-template-columns: 1fr
-        & > li.catalog__section-item
-          grid-column: 1 / -1
+        grid-template-columns: 1fr 1fr
+        //& > li.catalog__section-item
+        //  grid-column: 1 / -1
 
 
       &--2categ
@@ -28,13 +28,18 @@
         grid-template-columns: repeat(5, 1fr)
         .catalog__section-item:first-child
           grid-column: span 2
-        @media (max-width: $width-mobile)
-          grid-template-columns: repeat(3, 1fr)
           .catalog__section-item:nth-child(1),
           .catalog__section-item:nth-child(4)
             grid-column: span 2
             @media (max-width: 550px)
               grid-column: 1 / -1
+
+      &--2categ,
+      &--3categ,
+      &--4categ
+        @media (max-width: 550px)
+          grid-template-columns: repeat(2, 1fr)
+
 
 
     &-item
@@ -48,6 +53,13 @@
       box-shadow: 0 0 10px 0 rgb(35 31 32 / 10%)
       @media (max-width: $width-mobile)
         min-height: 140px
+      @media (max-width: 550px)
+        &.half
+          grid-column: span 1
+        &.full
+          grid-column: 1 / -1
+
+
       &::after
         content: ""
         position: absolute
@@ -85,3 +97,5 @@
         @include fontSize(18, 22)
         @media (max-width: $width-mobile)
           padding: 14px
+
+
