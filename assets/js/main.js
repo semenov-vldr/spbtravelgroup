@@ -224,6 +224,21 @@ if (header) {
     (!subnav) ? navItem.classList.add('empty') : navItem.classList.remove('empty');
   })
 
+
+  // scroll
+  let previousPosition = document.documentElement.scrollTop;
+
+  window.addEventListener('scroll', () => {
+    let currentPosition = document.documentElement.scrollTop;
+
+    if (previousPosition > currentPosition || window.scrollY < 100) {
+      header.classList.remove('js-scroll');
+    } else {
+      header.classList.add('js-scroll');
+    }
+    previousPosition = currentPosition;
+  })
+
 }
 
 // Params
