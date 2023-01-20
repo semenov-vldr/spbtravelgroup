@@ -9,7 +9,7 @@
     background-color: $yellow
     border-radius: 8px
     @media (max-width: 768px)
-      padding-bottom: 0
+      padding: 20px 20px 0
       text-align: center
       &::after
         content: ""
@@ -26,7 +26,6 @@
         border-radius: 0 0 8px 8px
 
   &__content
-    //display: flex
     gap: 40px
     justify-content: space-between
     align-items: center
@@ -62,7 +61,6 @@
       text-align: center
       @media (max-width: $width-mobile)
         font-size: 14px
-
     img
       width: 60px
       border: 2px solid #000
@@ -70,10 +68,8 @@
       padding: 10px
       @media (max-width: $width-mobile)
         width: 50px
-
     span
       line-height: 1.2
-
 
 
   &__form
@@ -92,11 +88,6 @@
     @media (min-width: $width-mobile)
       grid-column: 2 / span 1
       grid-row: 1 / span 2
-      //width: 50%
-
-  &__left
-    @media (min-width: $width-mobile)
-      //max-width: 50%
 
   &__title
     font-size: 28px
