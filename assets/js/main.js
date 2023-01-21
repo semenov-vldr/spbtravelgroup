@@ -226,18 +226,7 @@ if (header) {
 
 
   // scroll
-  let previousPosition = document.documentElement.scrollTop;
-
-  window.addEventListener('scroll', () => {
-    let currentPosition = document.documentElement.scrollTop;
-
-    if (previousPosition > currentPosition || window.scrollY < 100) {
-      header.classList.remove('js-scroll');
-    } else {
-      header.classList.add('js-scroll');
-    }
-    previousPosition = currentPosition;
-  })
+  window.addEventListener('scroll', () => scrollHeader (header) );
 
 }
 
@@ -414,7 +403,7 @@ if (gotTopButton) {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     })
   };
 
@@ -424,7 +413,6 @@ if (gotTopButton) {
 
   function trackScroll () {
     const offset = window.scrollY;
-
     const coords = document.documentElement.clientHeight;
 
     if (offset > coords) {
@@ -432,10 +420,20 @@ if (gotTopButton) {
     } else {
       gotTopButton.classList.remove('js-scroll-show');
     }
-  }
+  };
 
 }
 
+
+const headerExtragid = document.querySelector('header.header-extragid');
+
+if (headerExtragid) {
+
+  // scroll
+
+  window.addEventListener('scroll', () => scrollHeader (headerExtragid) );
+
+}
 
 const API_URL = "./assets/json/allExcursionCards.json";
 
@@ -532,3 +530,15 @@ fetch("./assets/json/data.json")
   .then(data => {
     //data.forEach(dat => console.log(dat.name))
   })
+
+let previousPosition = document.documentElement.scrollTop;
+function scrollHeader (header) {
+  let currentPosition = document.documentElement.scrollTop;
+
+  if (previousPosition > currentPosition || window.scrollY < 100) {
+    header.classList.remove('js-scroll');
+  } else {
+    header.classList.add('js-scroll');
+  }
+  previousPosition = currentPosition;
+}
