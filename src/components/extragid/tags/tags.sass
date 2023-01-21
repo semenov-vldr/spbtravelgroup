@@ -1,0 +1,20 @@
+.tags
+
+  &__list
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 12px
+
+  &__item
+    background-color: #fff
+    padding: 8px 12px
+    border-radius: 8px
+    cursor: pointer
+    transition: $transition
+    box-shadow: 0 0 10px 0 rgb(35 31 32 / 10%)
+    &:hover
+      background-color: $black
+      color: #fff
+    @media (max-width: 768px)
+      padding: 5px 10px

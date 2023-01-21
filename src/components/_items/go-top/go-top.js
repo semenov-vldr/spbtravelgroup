@@ -8,7 +8,7 @@ if (gotTopButton) {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     })
   };
 
@@ -18,7 +18,6 @@ if (gotTopButton) {
 
   function trackScroll () {
     const offset = window.scrollY;
-
     const coords = document.documentElement.clientHeight;
 
     if (offset > coords) {
@@ -26,6 +25,6 @@ if (gotTopButton) {
     } else {
       gotTopButton.classList.remove('js-scroll-show');
     }
-  }
+  };
 
 }

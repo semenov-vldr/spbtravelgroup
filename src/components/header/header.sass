@@ -45,15 +45,15 @@
     @media (max-width: 480px)
       gap: 20px
 
-  &__logo
-    img
-      max-height: 40px
-      @media (max-width: 600px)
-        max-height: 30px
-      @media (max-width: 550px)
-        max-height: 25px
-      @media (max-width: 340px)
-        max-height: 23px
+
+  img
+    max-height: 40px
+    @media (max-width: 600px)
+      max-height: 30px
+    @media (max-width: 550px)
+      max-height: 25px
+    @media (max-width: 340px)
+      max-height: 23px
 
   &__nav
     @media (max-width: $width-mobile)
@@ -147,6 +147,10 @@
       gap: 12px
       border: 2px solid transparent
       transition: 0.3s
+      & > span
+        display: flex
+        align-items: center
+        gap: 14px
       @media (max-width: 1500px)
         padding: 16px 8px
         min-height: 40px
@@ -165,6 +169,8 @@
       @media (min-width: $width-mobile)
         &:hover::after
           transform: rotate(180deg)
+        & > span img
+          display: none
       @media (max-width: $width-mobile)
         width: 100%
         justify-content: space-between
