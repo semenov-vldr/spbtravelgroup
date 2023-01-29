@@ -4,8 +4,6 @@
 <!-- Tel-->
 <!-- Email-->
 <!-- Text-->
-<!-- Кнопка "отправить" и согласие-->
-<!-- шаблон прогресс-бара-->
 <!-- карточка партнера-->
 <!-- Карточка экскурсии (для слайдера)-->
 <!-- Карточка экскурсии--><!DOCTYPE html>
@@ -32,174 +30,172 @@
         <div class="header-extragid__container container"><img class="header-extragid__logo" src="./assets/img/icons/logo-extragid.svg"><a class="button header-extragid__button-request" href="https://api.whatsapp.com/send?phone=79111562004"><span class="header-extragid__button-request-circle"></span>Записаться</a></div>
       </header>
       <main>
-        <section class="section-column">
-          <form class="form" action="" method="POST" aria-hidden="true">
-            <div class="form__container container"><span class="form__close"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="24px" height="24px" viewBox="0 0 24 24">
+        <form class="form" action="" method="POST" aria-hidden="true">
+          <div class="form__container container"><span class="form__close"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="24px" height="24px" viewBox="0 0 24 24">
   <path d="M4.293,18.293,10.586,12,4.293,5.707A1,1,0,0,1,5.707,4.293L12,10.586l6.293-6.293a1,1,0,1,1,1.414,1.414L13.414,12l6.293,6.293a1,1,0,1,1-1.414,1.414L12,13.414,5.707,19.707a1,1,0,0,1-1.414-1.414Z"/>
 </svg>
 </span>
-              <h4 class="form__title">Ваша запись на экскурсию</h4>
-              <!-- Имя-->
-              <div class="form__input-container">
-                <label>Как к вам обращаться ?
-                  <input placeholder="Ваше имя, фамилия" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40">
-                  <!--span.form__error.form__error--inputName Ошибка-->
-                </label>
-              </div>
-              <!-- Дата-->
-              <div class="form__input-container">
-                <label>Дата экскурсии
-                  <input class="date" placeholder="дд.мм.гггг" type="date" name="date" autocomplete="off" maxlength="10">
-                  <!--span.form__error.form__error--inputDate-->
-                </label>
-              </div>
-              <!-- Формат-->
-              <div class="form__input-container">
-                <label>Формат экскурсии
-                  <select class="form__input-format">
-                    <option value="Выберите формат экскурсии">Выберите формат экскурсии</option>
-                    <option value="Групповой">Групповой (в составе общей группы)</option>
-                    <option value="Индивидуально">Индивидуально (только Вы и гид)</option>
-                  </select>
-                </label>
-              </div>
-              <!-- Кол-во человек-->
-              <div class="form__input-container">
-                <label>Сколько у Вас человек?
-                  <select class="form__input-count-people">
-                    <option value="1">1 чел</option>
-                    <option value="2">2 чел</option>
-                    <option value="3">3 чел</option>
-                    <option value="4">4 чел</option>
-                    <option value="5">5 чел</option>
-                    <option value="6">6 чел</option>
-                    <option value="7">7 чел</option>
-                    <option value="8">8 чел</option>
-                    <option value="9">9 чел</option>
-                    <option value="10">10 чел</option>
-                    <option value="Более 10">Более 10 чел.</option>
-                  </select>
-                </label>
-              </div>
-              <!-- Время-->
-              <div class="form__input-container">
-                <label>Ориентировочное время?
-                  <input name="time">
-                </label>
-              </div>
-              <!-- Телефон-->
-              <div class="form__input-container">
-                <label>Телефон
-                  <input type="tel" name="phone" placeholder="+0 000 000 00 00" data-tel-input pattern=".{18,}" maxlength="18" autocomplete="off">
-                  <!--span.form__error.form__error--inputTel-->
-                </label>
-              </div>
-              <!-- Почта-->
-              <div class="form__input-container">
-                <label>Почта
-                  <input type="email" name="email" maxlength="40" placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
-                  <!--span.form__error.form__error--inputEmail-->
-                </label>
-              </div>
-              <!-- Комментарий-->
-              <div class="form__input-container">
-                <label>Комментарий
-                  <textarea placeholder="Введите ваше сообщение..." name="message" maxlength="200" rows="4"></textarea>
-                  <!--span.form__error.form__error--inputText-->
-                </label>
-              </div>
-              <button class="button button--accent" type="submit">Отправить</button>
-              <p>Нажатием на кнопку вы подтверждаете свою запись на экскурсию и обработку персональных данных в соответствии пользовательским соглашением.</p>
+            <h4 class="form__title">Ваша запись на экскурсию</h4>
+            <!-- Имя-->
+            <div class="form__input-container">
+              <label>Как к вам обращаться ?
+                <input placeholder="Ваше имя, фамилия" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40">
+                <!--span.form__error.form__error--inputName Ошибка-->
+              </label>
             </div>
-          </form>
-          <!--include ../components/hero/hero-index-->
-          <!--include ../components/_items/banner/banner-->
-          <div class="header-banner">
-            <div class="header-banner__container container">
-              <div class="header-banner__content">
-                <div class="header-banner__header">
-                  <h2 class="header-banner__title">Экскурсии по Санкт&nbsp;-&nbsp;Петербургу</h2><span class="header-banner__subtitle">Ваш отдых — наша забота!</span>
-                </div>
-                <ul class="header-banner__icon-list">
-                  <li class="header-banner__icon-item"><img src="./assets/img/icons/feedback/people.svg"><span>Без <br> очередей</span></li>
-                  <li class="header-banner__icon-item"><img src="./assets/img/icons/how-we-work/04.svg"><span>Уникальные <br> маршруты</span></li>
-                  <li class="header-banner__icon-item"><img src="./assets/img/icons/ticket.svg"><span>Входные <br> билеты</span></li>
-                </ul><a class="button button--outline-black" href="#feeblack">Заказать звонок</a>
+            <!-- Дата-->
+            <div class="form__input-container">
+              <label>Дата экскурсии
+                <input placeholder="дд.мм.гггг" type="date" name="date" autocomplete="off" maxlength="10">
+                <!--span.form__error.form__error--inputDate-->
+              </label>
+            </div>
+            <!-- Формат-->
+            <div class="form__input-container">
+              <label>Формат экскурсии
+                <select class="form__input-format">
+                  <option value="Выберите формат экскурсии">Выберите формат экскурсии</option>
+                  <option value="Групповой">Групповой (в составе общей группы)</option>
+                  <option value="Индивидуально">Индивидуально (только Вы и гид)</option>
+                </select>
+              </label>
+            </div>
+            <!-- Кол-во человек-->
+            <div class="form__input-container">
+              <label>Сколько у Вас человек?
+                <select class="form__input-count-people">
+                  <option value="1">1 чел</option>
+                  <option value="2">2 чел</option>
+                  <option value="3">3 чел</option>
+                  <option value="4">4 чел</option>
+                  <option value="5">5 чел</option>
+                  <option value="6">6 чел</option>
+                  <option value="7">7 чел</option>
+                  <option value="8">8 чел</option>
+                  <option value="9">9 чел</option>
+                  <option value="10">10 чел</option>
+                  <option value="Более 10">Более 10 чел.</option>
+                </select>
+              </label>
+            </div>
+            <!-- Время-->
+            <div class="form__input-container">
+              <label>Ориентировочное время?
+                <input class="form__input-time" name="time" placeholder="c 11:00 до 23:00" autocomplete="off">
+              </label>
+            </div>
+            <!-- Телефон-->
+            <div class="form__input-container">
+              <label>Телефон
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="off">
+                <!--span.form__error.form__error--inputTel-->
+              </label>
+            </div>
+            <!-- Почта-->
+            <div class="form__input-container">
+              <label>Почта
+                <input type="email" name="email" maxlength="40" placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
+                <!--span.form__error.form__error--inputEmail-->
+              </label>
+            </div>
+            <!-- Комментарий-->
+            <div class="form__input-container">
+              <label>Комментарий
+                <textarea placeholder="Введите ваше сообщение..." name="message" maxlength="200" rows="4"></textarea>
+                <!--span.form__error.form__error--inputText-->
+              </label>
+            </div>
+            <button class="button button--accent" type="submit">Отправить</button>
+            <p>Нажатием на кнопку вы подтверждаете свою запись на экскурсию и обработку персональных данных в соответствии пользовательским соглашением.</p>
+          </div>
+        </form>
+        <!--include ../components/hero/hero-index-->
+        <!--include ../components/_items/banner/banner-->
+        <section class="header-banner">
+          <div class="header-banner__container container">
+            <div class="header-banner__content">
+              <div class="header-banner__header">
+                <h2 class="header-banner__title">Экскурсии по Санкт&nbsp;-&nbsp;Петербургу</h2><span class="header-banner__subtitle">Ваш отдых — наша забота!</span>
               </div>
-              <div class="header-banner__image"><img src="https://thumb.tildacdn.com/tild3432-6361-4536-b835-303965333430/-/resize/300x400/-/format/webp/2b9cd66d-9d02-4fbd-a.jpg"></div>
+              <ul class="header-banner__icon-list">
+                <li class="header-banner__icon-item"><img src="./assets/img/icons/feedback/people.svg"><span>Без <br> очередей</span></li>
+                <li class="header-banner__icon-item"><img src="./assets/img/icons/how-we-work/04.svg"><span>Уникальные <br> маршруты</span></li>
+                <li class="header-banner__icon-item"><img src="./assets/img/icons/ticket.svg"><span>Входные <br> билеты</span></li>
+              </ul><a class="button button--outline-black" href="#feeblack">Заказать звонок</a>
+            </div>
+            <div class="header-banner__image"><img src="https://thumb.tildacdn.com/tild3432-6361-4536-b835-303965333430/-/resize/300x400/-/format/webp/2b9cd66d-9d02-4fbd-a.jpg"></div>
+          </div>
+        </section>
+        <div class="tags">
+          <div class="tags__container container">
+            <h2 class="title-section">Подбор по тегам</h2>
+            <div class="tags__list">
+              <button class="tags__item">В составе группы</button>
+              <button class="tags__item">Индивидуально</button>
+              <button class="tags__item">Невский проспект</button>
+              <button class="tags__item">Петроградка</button>
+              <button class="tags__item">Акватория Невы</button>
+              <button class="tags__item">КОМБО 3в1</button>
+              <button class="tags__item">Парадные и дворы</button>
+              <button class="tags__item">Коммуналки</button>
+              <button class="tags__item">Петроградка</button>
+              <button class="tags__item">Город желаний</button>
+              <button class="tags__item">Мистический Петербург</button>
+              <button class="tags__item">Развод мостов с крыши</button>
+              <button class="tags__item">Экскурсия + фотосессия</button>
+              <button class="tags__item">Свидание на крыше</button>
+              <button class="tags__item">Подарочный сертификат</button>
             </div>
           </div>
-          <div class="tags">
-            <div class="tags__container container">
-              <h2 class="title-section">Подбор по тегам</h2>
-              <div class="tags__list">
-                <button class="tags__item">В составе группы</button>
-                <button class="tags__item">Индивидуально</button>
-                <button class="tags__item">Невский проспект</button>
-                <button class="tags__item">Петроградка</button>
-                <button class="tags__item">Акватория Невы</button>
-                <button class="tags__item">КОМБО 3в1</button>
-                <button class="tags__item">Парадные и дворы</button>
-                <button class="tags__item">Коммуналки</button>
-                <button class="tags__item">Петроградка</button>
-                <button class="tags__item">Город желаний</button>
-                <button class="tags__item">Мистический Петербург</button>
-                <button class="tags__item">Развод мостов с крыши</button>
-                <button class="tags__item">Экскурсия + фотосессия</button>
-                <button class="tags__item">Свидание на крыше</button>
-                <button class="tags__item">Подарочный сертификат</button>
-              </div>
+        </div>
+        <section class="how-we-work">
+          <div class="how-we-work__container container">
+            <h2 class="title-section">Как мы работаем</h2>
+            <div class="how-we-work__body">
+              <ul class="how-we-work__list">
+                <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/01.svg">
+                  <h3 class="how-we-work__item-title">1 Оставьте заявку</h3>
+                  <p class="how-we-work__item-text">Вы выбираете на нашем сайте интересующую услугу или мероприятие и нажимаете кнопку "Забронировать"</p>
+                </li>
+                <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/02.svg">
+                  <h3 class="how-we-work__item-title">2 Оплата бронирования</h3>
+                  <p class="how-we-work__item-text">В течение 15 минут, вам позвонит наш менеджер, вы выбираете удобное для вас время и дату, далее менеджер выставляет вам счет для оплаты бронирования.</p>
+                </li>
+                <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/03.svg">
+                  <h3 class="how-we-work__item-title">3 Подтверждение оплаты</h3>
+                  <p class="how-we-work__item-text">На указанный вами почтовый адрес или мессенджер высылается ваучер, кассовый чек. А также вся подробная информация по заказу.</p>
+                </li>
+                <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/04.svg">
+                  <h3 class="how-we-work__item-title">4 Программа и маршрут</h3>
+                  <p class="how-we-work__item-text">Все услуги, которые мы предоставляем, выполняют профессионалы своего дела: аккредитованные гиды, водители, капитаны со стажем, компетентные менеджеры с удовольствием ответят на все вопросы.</p>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="how-we-work">
-            <div class="how-we-work__container container">
-              <h2 class="title-section">Как мы работаем</h2>
-              <div class="how-we-work__body">
-                <ul class="how-we-work__list">
-                  <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/01.svg">
-                    <h3 class="how-we-work__item-title">1 Оставьте заявку</h3>
-                    <p class="how-we-work__item-text">Вы выбираете на нашем сайте интересующую услугу или мероприятие и нажимаете кнопку "Забронировать"</p>
-                  </li>
-                  <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/02.svg">
-                    <h3 class="how-we-work__item-title">2 Оплата бронирования</h3>
-                    <p class="how-we-work__item-text">В течение 15 минут, вам позвонит наш менеджер, вы выбираете удобное для вас время и дату, далее менеджер выставляет вам счет для оплаты бронирования.</p>
-                  </li>
-                  <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/03.svg">
-                    <h3 class="how-we-work__item-title">3 Подтверждение оплаты</h3>
-                    <p class="how-we-work__item-text">На указанный вами почтовый адрес или мессенджер высылается ваучер, кассовый чек. А также вся подробная информация по заказу.</p>
-                  </li>
-                  <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/04.svg">
-                    <h3 class="how-we-work__item-title">4 Программа и маршрут</h3>
-                    <p class="how-we-work__item-text">Все услуги, которые мы предоставляем, выполняют профессионалы своего дела: аккредитованные гиды, водители, капитаны со стажем, компетентные менеджеры с удовольствием ответят на все вопросы.</p>
-                  </li>
-                </ul>
+        </section>
+        <section class="feedback container" id="feeblack">
+          <div class="feedback__container">
+            <div class="feedback__content">
+              <div class="feedback__left">
+                <h2 class="feedback__title">Хватит искать! Просто закажите.</h2><span class="feedback__text">Ваш отдых — это наша забота!</span>
+                <p class="feedback__text">Индивидуальный подход к туристам, гибкая ценовая политика, оперативность и качество.</p>
+              </div>
+              <ul class="feedback__icons">
+                <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/people.svg"><span>Без очередей</span></li>
+                <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/guide.svg"><span>Персональный экскурсовод</span></li>
+                <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/auto.svg"><span>Автомобиль с водителем</span></li>
+              </ul>
+              <div class="feedback__right">
+                <form class="feedback__form">
+                  <div class="feedback__form-container">
+                    <input type="tel" placeholder="+7 (___) ___-__-__">
+                    <button class="button button--accent" type="submit">Заказать звонок</button>
+                  </div>
+                </form>
               </div>
             </div>
-          </div>
-          <div class="feedback container" id="feeblack">
-            <div class="feedback__container">
-              <div class="feedback__content">
-                <div class="feedback__left">
-                  <h2 class="feedback__title">Хватит искать! Просто закажите.</h2><span class="feedback__text">Ваш отдых — это наша забота!</span>
-                  <p class="feedback__text">Индивидуальный подход к туристам, гибкая ценовая политика, оперативность и качество.</p>
-                </div>
-                <ul class="feedback__icons">
-                  <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/people.svg"><span>Без очередей</span></li>
-                  <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/guide.svg"><span>Персональный экскурсовод</span></li>
-                  <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/auto.svg"><span>Автомобиль с водителем</span></li>
-                </ul>
-                <div class="feedback__right">
-                  <form class="feedback__form">
-                    <div class="feedback__form-container">
-                      <input type="tel" placeholder="+7(___)___-__-__">
-                      <button class="button button--accent" type="submit">Заказать звонок</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <hr>
-              <p class="feedback__personal-data">Нажимая «Заказать звонок», вы даете согласие на <a href="##">обработку персональных данных</a> и принимаете условия пользовательского соглашения.</p>
-            </div>
+            <hr>
+            <p class="feedback__personal-data">Нажимая «Заказать звонок», вы даете согласие на <a href="##">обработку персональных данных</a> и принимаете условия пользовательского соглашения.</p>
           </div>
         </section>
       </main>
@@ -208,10 +204,10 @@
           <div class="footer__contacts">
             <div class="footer__social">
               <ul class="footer__social-list">
-                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="##" title="telegram" style="background-image: url('./assets/img/icons/social/telegram.svg')"></a></li>
-                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="##" title="vk" style="background-image: url('./assets/img/icons/social/vk.svg')"></a></li>
-                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="##" title="instagram" style="background-image: url('./assets/img/icons/social/instagram.svg')"></a><img class="footer__social-hint-icon" src="./assets/img/icons/important.svg"><span class="footer__social-hint-text"><span>#spbtravelgroup</span> — десятки тысяч фотографий путешественников.</span></li>
-                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="##" title="whatsapp" style="background-image: url('./assets/img/icons/social/whatsapp.svg')"></a></li>
+                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="https://t.me/alinaspbtravelgroup" title="telegram" style="background-image: url('./assets/img/icons/social/telegram.svg')"></a></li>
+                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="https://vk.com/spbtravelgroup" title="vk" style="background-image: url('./assets/img/icons/social/vk.svg')"></a></li>
+                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="https://www.instagram.com/spbtravelgroup.ru" title="instagram" style="background-image: url('./assets/img/icons/social/instagram.svg')"></a><img class="footer__social-hint-icon" src="./assets/img/icons/important.svg"><span class="footer__social-hint-text"><span>#spbtravelgroup</span> — десятки тысяч фотографий путешественников.</span></li>
+                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="https://api.whatsapp.com/send?phone=79111562004" title="whatsapp" style="background-image: url('./assets/img/icons/social/whatsapp.svg')"></a></li>
               </ul>
             </div><a class="footer__phone" href="tel:+79111562004">
               <svg class="footer__icon" width="35" height="35" fill="#ffcc00">

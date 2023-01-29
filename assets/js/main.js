@@ -531,6 +531,14 @@ fetch("./assets/json/data.json")
     //data.forEach(dat => console.log(dat.name))
   })
 
+let maskTel = new Inputmask("+7 (999) 999-99-99");
+maskTel.mask("[type='tel']");
+
+let maskTime = new Inputmask("99:99");
+maskTime.mask(".form__input-time");
+
+
+
 let previousPosition = document.documentElement.scrollTop;
 function scrollHeader (header) {
   let currentPosition = document.documentElement.scrollTop;

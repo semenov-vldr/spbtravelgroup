@@ -4,8 +4,6 @@
 <!-- Tel-->
 <!-- Email-->
 <!-- Text-->
-<!-- Кнопка "отправить" и согласие-->
-<!-- шаблон прогресс-бара-->
 <!-- карточка партнера-->
 <!-- Карточка экскурсии (для слайдера)-->
 <!-- Карточка экскурсии--><!DOCTYPE html>
@@ -93,406 +91,404 @@
         </div>
       </header>
       <main>
-        <section class="section-column">
-          <form class="form" action="" method="POST" aria-hidden="true">
-            <div class="form__container container"><span class="form__close"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="24px" height="24px" viewBox="0 0 24 24">
+        <form class="form" action="" method="POST" aria-hidden="true">
+          <div class="form__container container"><span class="form__close"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="24px" height="24px" viewBox="0 0 24 24">
   <path d="M4.293,18.293,10.586,12,4.293,5.707A1,1,0,0,1,5.707,4.293L12,10.586l6.293-6.293a1,1,0,1,1,1.414,1.414L13.414,12l6.293,6.293a1,1,0,1,1-1.414,1.414L12,13.414,5.707,19.707a1,1,0,0,1-1.414-1.414Z"/>
 </svg>
 </span>
-              <h4 class="form__title">Ваша запись на экскурсию</h4>
-              <!-- Имя-->
-              <div class="form__input-container">
-                <label>Как к вам обращаться ?
-                  <input placeholder="Ваше имя, фамилия" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40">
-                  <!--span.form__error.form__error--inputName Ошибка-->
-                </label>
-              </div>
-              <!-- Дата-->
-              <div class="form__input-container">
-                <label>Дата экскурсии
-                  <input class="date" placeholder="дд.мм.гггг" type="date" name="date" autocomplete="off" maxlength="10">
-                  <!--span.form__error.form__error--inputDate-->
-                </label>
-              </div>
-              <!-- Формат-->
-              <div class="form__input-container">
-                <label>Формат экскурсии
-                  <select class="form__input-format">
-                    <option value="Выберите формат экскурсии">Выберите формат экскурсии</option>
-                    <option value="Групповой">Групповой (в составе общей группы)</option>
-                    <option value="Индивидуально">Индивидуально (только Вы и гид)</option>
-                  </select>
-                </label>
-              </div>
-              <!-- Кол-во человек-->
-              <div class="form__input-container">
-                <label>Сколько у Вас человек?
-                  <select class="form__input-count-people">
-                    <option value="1">1 чел</option>
-                    <option value="2">2 чел</option>
-                    <option value="3">3 чел</option>
-                    <option value="4">4 чел</option>
-                    <option value="5">5 чел</option>
-                    <option value="6">6 чел</option>
-                    <option value="7">7 чел</option>
-                    <option value="8">8 чел</option>
-                    <option value="9">9 чел</option>
-                    <option value="10">10 чел</option>
-                    <option value="Более 10">Более 10 чел.</option>
-                  </select>
-                </label>
-              </div>
-              <!-- Время-->
-              <div class="form__input-container">
-                <label>Ориентировочное время?
-                  <input name="time">
-                </label>
-              </div>
-              <!-- Телефон-->
-              <div class="form__input-container">
-                <label>Телефон
-                  <input type="tel" name="phone" placeholder="+0 000 000 00 00" data-tel-input pattern=".{18,}" maxlength="18" autocomplete="off">
-                  <!--span.form__error.form__error--inputTel-->
-                </label>
-              </div>
-              <!-- Почта-->
-              <div class="form__input-container">
-                <label>Почта
-                  <input type="email" name="email" maxlength="40" placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
-                  <!--span.form__error.form__error--inputEmail-->
-                </label>
-              </div>
-              <!-- Комментарий-->
-              <div class="form__input-container">
-                <label>Комментарий
-                  <textarea placeholder="Введите ваше сообщение..." name="message" maxlength="200" rows="4"></textarea>
-                  <!--span.form__error.form__error--inputText-->
-                </label>
-              </div>
-              <button class="button button--accent" type="submit">Отправить</button>
-              <p>Нажатием на кнопку вы подтверждаете свою запись на экскурсию и обработку персональных данных в соответствии пользовательским соглашением.</p>
+            <h4 class="form__title">Ваша запись на экскурсию</h4>
+            <!-- Имя-->
+            <div class="form__input-container">
+              <label>Как к вам обращаться ?
+                <input placeholder="Ваше имя, фамилия" name="name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" maxlength="40">
+                <!--span.form__error.form__error--inputName Ошибка-->
+              </label>
             </div>
-          </form>
-          <div class="hero-index">
-            <div class="swiper-container main-slider loading">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg" style="background-image:url(https://img.freepik.com/free-photo/nevskiy-prospekt-at-night_1398-450.jpg?w=1380&amp;t=st=1672856334~exp=1672856934~hmac=c1c2dbbbde8504a8aa316480331862b93cef3594fc6b8b2e1e718a20715778cb)" data-swiper-parallax-x="50%"><img class="entity-img" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MDE1NTg2Ng&amp;ixlib=rb-1.2.1&amp;q=85"></figure>
-                  <div class="content">
-                    <p class="title">Shaun Matthews</p><span class="caption" data-swiper-parallax-x="30%" data-swiper-parallax-opacity="0">Lorem Ipsum has been the industry&apos</span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg" style="background-image:url(https://img.freepik.com/premium-photo/aerial-landscape-with-warships-in-the-neva-river-before-the-holiday-of-the-russian-navy-at-early-mor_215484-566.jpg?w=1380)" data-swiper-parallax-x="50%"><img class="entity-img" src="https://images.unsplash.com/photo-1500643752441-4dc90cda350a?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MDE1NTg2Ng&amp;ixlib=rb-1.2.1&amp;q=85"></figure>
-                  <div class="content">
-                    <p class="title">Alexis Berry</p><span class="caption" data-swiper-parallax-x="30%" data-swiper-parallax-opacity="0">Lorem Ipsum has been the industry&apos</span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <figure class="slide-bgimg" style="background-image:url(https://img.freepik.com/free-photo/view-of-st-petersburg-in-night_1398-2768.jpg?w=1380&amp;t=st=1672856601~exp=1672857201~hmac=3f3778bcb4021be80a4096dac4736675d5f53de24f2862ac6a59855bf9e0e7d3)" data-swiper-parallax-x="50%"><img class="entity-img" src="https://images.unsplash.com/photo-1465408953385-7c4627c29435?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MDE1NTg2Ng&amp;ixlib=rb-1.2.1&amp;q=85"></figure>
-                  <div class="content">
-                    <p class="title">Billie&#x9;Pierce</p><span class="caption" data-swiper-parallax-x="30%" data-swiper-parallax-opacity="0">Lorem Ipsum has been the industry&apos</span>
-                  </div>
-                </div>
-              </div>
-              <!-- If we need navigation buttons-->
-              <div class="swiper-button-prev swiper-button-white"></div>
-              <div class="swiper-button-next swiper-button-white"></div>
+            <!-- Дата-->
+            <div class="form__input-container">
+              <label>Дата экскурсии
+                <input placeholder="дд.мм.гггг" type="date" name="date" autocomplete="off" maxlength="10">
+                <!--span.form__error.form__error--inputDate-->
+              </label>
             </div>
+            <!-- Формат-->
+            <div class="form__input-container">
+              <label>Формат экскурсии
+                <select class="form__input-format">
+                  <option value="Выберите формат экскурсии">Выберите формат экскурсии</option>
+                  <option value="Групповой">Групповой (в составе общей группы)</option>
+                  <option value="Индивидуально">Индивидуально (только Вы и гид)</option>
+                </select>
+              </label>
+            </div>
+            <!-- Кол-во человек-->
+            <div class="form__input-container">
+              <label>Сколько у Вас человек?
+                <select class="form__input-count-people">
+                  <option value="1">1 чел</option>
+                  <option value="2">2 чел</option>
+                  <option value="3">3 чел</option>
+                  <option value="4">4 чел</option>
+                  <option value="5">5 чел</option>
+                  <option value="6">6 чел</option>
+                  <option value="7">7 чел</option>
+                  <option value="8">8 чел</option>
+                  <option value="9">9 чел</option>
+                  <option value="10">10 чел</option>
+                  <option value="Более 10">Более 10 чел.</option>
+                </select>
+              </label>
+            </div>
+            <!-- Время-->
+            <div class="form__input-container">
+              <label>Ориентировочное время?
+                <input class="form__input-time" name="time" placeholder="c 11:00 до 23:00" autocomplete="off">
+              </label>
+            </div>
+            <!-- Телефон-->
+            <div class="form__input-container">
+              <label>Телефон
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="off">
+                <!--span.form__error.form__error--inputTel-->
+              </label>
+            </div>
+            <!-- Почта-->
+            <div class="form__input-container">
+              <label>Почта
+                <input type="email" name="email" maxlength="40" placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
+                <!--span.form__error.form__error--inputEmail-->
+              </label>
+            </div>
+            <!-- Комментарий-->
+            <div class="form__input-container">
+              <label>Комментарий
+                <textarea placeholder="Введите ваше сообщение..." name="message" maxlength="200" rows="4"></textarea>
+                <!--span.form__error.form__error--inputText-->
+              </label>
+            </div>
+            <button class="button button--accent" type="submit">Отправить</button>
+            <p>Нажатием на кнопку вы подтверждаете свою запись на экскурсию и обработку персональных данных в соответствии пользовательским соглашением.</p>
           </div>
-          <!--include ../components/_items/banner/banner-->
-          <div class="header-banner">
-            <div class="header-banner__container container">
-              <div class="header-banner__content">
-                <div class="header-banner__header">
-                  <h2 class="header-banner__title">Экскурсии по Санкт&nbsp;-&nbsp;Петербургу</h2><span class="header-banner__subtitle">Ваш отдых — наша забота!</span>
+        </form>
+        <section class="hero-index">
+          <div class="swiper-container main-slider loading">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure class="slide-bgimg" style="background-image:url(https://img.freepik.com/free-photo/nevskiy-prospekt-at-night_1398-450.jpg?w=1380&amp;t=st=1672856334~exp=1672856934~hmac=c1c2dbbbde8504a8aa316480331862b93cef3594fc6b8b2e1e718a20715778cb)" data-swiper-parallax-x="50%"><img class="entity-img" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MDE1NTg2Ng&amp;ixlib=rb-1.2.1&amp;q=85"></figure>
+                <div class="content">
+                  <p class="title">Shaun Matthews</p><span class="caption" data-swiper-parallax-x="30%" data-swiper-parallax-opacity="0">Lorem Ipsum has been the industry&apos</span>
                 </div>
-                <ul class="header-banner__icon-list">
-                  <li class="header-banner__icon-item"><img src="./assets/img/icons/feedback/people.svg"><span>Без <br> очередей</span></li>
-                  <li class="header-banner__icon-item"><img src="./assets/img/icons/how-we-work/04.svg"><span>Уникальные <br> маршруты</span></li>
-                  <li class="header-banner__icon-item"><img src="./assets/img/icons/ticket.svg"><span>Входные <br> билеты</span></li>
-                </ul><a class="button button--outline-black" href="#feeblack">Заказать звонок</a>
               </div>
-              <div class="header-banner__image"><img src="https://thumb.tildacdn.com/tild3432-6361-4536-b835-303965333430/-/resize/300x400/-/format/webp/2b9cd66d-9d02-4fbd-a.jpg"></div>
-            </div>
-          </div>
-          <div class="excursion">
-            <div class="container">
-              <h2 class="title-section">Популярные экскурсии</h2>
-              <div class="excursion__slider-container">
-                <div class="excursion__slider-wrapper">
-                  <div class="excursion__list swiper-wrapper">
-                    <div class="swiper-slide">
-                      <article class="excursion-card">
-                        <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild6131-6164-4561-b331-663531303430/-/cover/700x470/center/center/-/format/webp/Yk7xoFRUTS2DgmArrGvy.jpg"/>
-                          <div class="excursion-card__badges"><span class="excursion-card__badge">3 часа</span></div>
-                        </div>
-                        <div class="excursion-card__content">
-                          <h3 class="excursion-card__title">Императорские и великокняжеские дворцы Санкт-Петербурга</h3>
-                          <p class="excursion-card__timetable"><span>вт, сб:</span>13:00</p>
-                          <ul class="excursion-card__description-list">
-                            <li class="excursion-card__description-item">Описание 1</li>
-                            <li class="excursion-card__description-item">Описание Описание 2</li>
-                            <li class="excursion-card__description-item">Описание 3</li>
-                          </ul>
-                          <div class="excursion-card__price"><span>1 500 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="excursion-card">
-                        <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3938-3232-4336-b332-343663353738/-/cover/700x470/center/center/-/format/webp/qVt5TsyywpEXf6vpCwbn.jpg"/>
-                          <div class="excursion-card__badges"><span class="excursion-card__badge">1.5 часа</span></div>
-                        </div>
-                        <div class="excursion-card__content">
-                          <h3 class="excursion-card__title">Обзорная экскурсия по городу (автобусная или индивидуальная)</h3>
-                          <p class="excursion-card__timetable"><span>пн - вс:</span>10:00, 11:00, 12:00, 14:00, 15:00, 16:30, 17:00, 17:55</p>
-                          <ul class="excursion-card__description-list">
-                            <li class="excursion-card__description-item">Описание 1</li>
-                            <li class="excursion-card__description-item">Описание 2</li>
-                            <li class="excursion-card__description-item">Описание Описание 3</li>
-                          </ul>
-                          <div class="excursion-card__price"><span>700 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="excursion-card">
-                        <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3730-6364-4063-b130-343965336234/-/cover/350x235/center/center/-/format/webp/m9tF8ucwVgMQHnQAwo9N.jpg"/>
-                          <div class="excursion-card__badges"><span class="excursion-card__badge">2.5-3 часа</span></div>
-                        </div>
-                        <div class="excursion-card__content">
-                          <h3 class="excursion-card__title">Обзорная экскурсия по городу с посещением Эрмитажа</h3>
-                          <p class="excursion-card__timetable"><span>пн - вс:</span>13:00, 16:00</p>
-                          <ul class="excursion-card__description-list">
-                            <li class="excursion-card__description-item">Описание Описание 1</li>
-                            <li class="excursion-card__description-item">Описание 2</li>
-                            <li class="excursion-card__description-item">Описание 3</li>
-                          </ul>
-                          <div class="excursion-card__price"><span>1 500 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="excursion-card">
-                        <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3236-6239-4930-a532-616235663638/-/cover/350x235/center/center/-/format/webp/g1AQbFLkCWgYpvLybfee.jpg"/>
-                          <div class="excursion-card__badges"><span class="excursion-card__badge">2.5 часа</span></div>
-                        </div>
-                        <div class="excursion-card__content">
-                          <h3 class="excursion-card__title">Новогодняя сказка Петербурга</h3>
-                          <p class="excursion-card__timetable"><span>пн - вс:</span>18:00</p>
-                          <ul class="excursion-card__description-list">
-                            <li class="excursion-card__description-item">Описание Описание 1</li>
-                            <li class="excursion-card__description-item">Описание 2</li>
-                          </ul>
-                          <div class="excursion-card__price"><span>1 200 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="swiper-slide">
-                      <article class="excursion-card">
-                        <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3462-6431-4233-b332-366434303937/-/cover/350x235/center/center/-/format/webp/IMG_0856-min.JPG"/>
-                          <div class="excursion-card__badges"><span class="excursion-card__badge">2-2.5 часа</span></div>
-                        </div>
-                        <div class="excursion-card__content">
-                          <h3 class="excursion-card__title">Мифы и легенды города (автобусная или индивидуальная)</h3>
-                          <p class="excursion-card__timetable"><span>пн - вс:</span>13:00, 16:00</p>
-                          <ul class="excursion-card__description-list">
-                            <li class="excursion-card__description-item">Описание 1</li>
-                          </ul>
-                          <div class="excursion-card__price"><span>1 000 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
-                        </div>
-                      </article>
-                    </div>
-                  </div>
-                  <div class="swiper-pagination"></div>
+              <div class="swiper-slide">
+                <figure class="slide-bgimg" style="background-image:url(https://img.freepik.com/premium-photo/aerial-landscape-with-warships-in-the-neva-river-before-the-holiday-of-the-russian-navy-at-early-mor_215484-566.jpg?w=1380)" data-swiper-parallax-x="50%"><img class="entity-img" src="https://images.unsplash.com/photo-1500643752441-4dc90cda350a?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MDE1NTg2Ng&amp;ixlib=rb-1.2.1&amp;q=85"></figure>
+                <div class="content">
+                  <p class="title">Alexis Berry</p><span class="caption" data-swiper-parallax-x="30%" data-swiper-parallax-opacity="0">Lorem Ipsum has been the industry&apos</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <figure class="slide-bgimg" style="background-image:url(https://img.freepik.com/free-photo/view-of-st-petersburg-in-night_1398-2768.jpg?w=1380&amp;t=st=1672856601~exp=1672857201~hmac=3f3778bcb4021be80a4096dac4736675d5f53de24f2862ac6a59855bf9e0e7d3)" data-swiper-parallax-x="50%"><img class="entity-img" src="https://images.unsplash.com/photo-1465408953385-7c4627c29435?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MDE1NTg2Ng&amp;ixlib=rb-1.2.1&amp;q=85"></figure>
+                <div class="content">
+                  <p class="title">Billie&#x9;Pierce</p><span class="caption" data-swiper-parallax-x="30%" data-swiper-parallax-opacity="0">Lorem Ipsum has been the industry&apos</span>
                 </div>
               </div>
             </div>
+            <!-- If we need navigation buttons-->
+            <div class="swiper-button-prev swiper-button-white"></div>
+            <div class="swiper-button-next swiper-button-white"></div>
           </div>
-          <div class="catalog" id="excursions">
-            <div class="container catalog__container">
-              <section class="catalog__section">
-                <!--h2.catalog__section-title.title-section Заголовок 1-->
-                <ul class="catalog__section-list catalog__section-list--3categ">
-                  <li class="catalog__section-item full"><a href="bright-holiday.html">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3361-6637-4630-b330-333637363065/-/resize/300x400/-/format/webp/Xp9zpOH6y_9p9aDRE43H.png)"></div>
-                      <h3>Яркий отдых в Санкт-Петербурге 2023</h3></a></li>
-                  <li class="catalog__section-item half"><a href="bright-holiday.html">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3061-3565-4161-b137-383730643963/-/resize/300x400/-/format/webp/a8e3e02a-644f-11ea-a.jpg)"></div>
-                      <h3>Индивидуальные экскурсии</h3></a></li>
-                  <li class="catalog__section-item half"><a href="bright-holiday.html">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3438-3839-4534-b564-303235343563/-/resize/300x400/-/format/webp/obzornye-home.jpg)"></div>
-                      <h3>Обзорные экскурсии по городу</h3></a></li>
-                </ul>
-              </section>
-              <section class="catalog__section">
-                <!--h2.catalog__section-title.title-section Заголовок 2-->
-                <ul class="catalog__section-list catalog__section-list--4categ">
-                  <li class="catalog__section-item full"><a href="/test/testpage.html">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3431-3736-4431-b631-363361353638/-/resize/300x400/-/format/webp/D7l6m1AW0AADk73.png)"></div>
-                      <h3>Экскурсии в пригороды</h3></a></li>
-                  <li class="catalog__section-item half"><a href="extragid.html">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3432-6361-4536-b835-303965333430/-/resize/300x400/-/format/webp/2b9cd66d-9d02-4fbd-a.jpg)"></div>
-                      <h3>Экскурсии по крышам</h3></a></li>
-                  <li class="catalog__section-item half"><a href="">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3931-3930-4736-a564-616263623239/-/resize/300x400/-/format/webp/mary-ray-ctdYxnyYm1U.jpg)"></div>
-                      <h3>Парадные и Дворы Петербурга</h3></a></li>
-                  <li class="catalog__section-item full"><a href="">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild6632-6165-4639-b266-353863626630/-/resize/300x400/-/format/webp/_MG_0726.jpg)"></div>
-                      <h3>Водные прогулки по рекам и каналам</h3></a></li>
-                </ul>
-              </section>
-              <section class="catalog__section">
-                <!--h2.catalog__section-title.title-section Заголовок 3-->
-                <ul class="catalog__section-list catalog__section-list--2categ">
-                  <li class="catalog__section-item"><a href="">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3133-3535-4362-b530-316235633265/-/resize/300x400/-/format/webp/nightruscom-spb-0014.jpg)"></div>
-                      <h3>Ночные и вечерние экскурсии</h3></a></li>
-                  <li class="catalog__section-item"><a href="">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3163-6537-4962-a666-616262653238/-/resize/300x400/-/format/webp/hermitazh-home.jpg)"></div>
-                      <h3>Авторские, тематические экскурсии</h3></a></li>
-                </ul>
-              </section>
-              <section class="catalog__section">
-                <!--h2.catalog__section-title.title-section Заголовок 4-->
-                <ul class="catalog__section-list catalog__section-list--4categ">
-                  <li class="catalog__section-item"><a href="">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3233-3063-4666-a631-363061626265/-/resize/300x400/-/format/webp/S2KkI0sq0Bg.jpeg)"></div>
-                      <h3>Свидание на крыше</h3></a></li>
-                  <li class="catalog__section-item"><a href="">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3964-3434-4637-b836-313239646365/-/resize/300x400/-/format/webp/B033FDA7-E44A-4D7E-8.jpeg)"></div>
-                      <h3>Фотосессии на крыше</h3></a></li>
-                  <li class="catalog__section-item"><a href="">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild6161-3565-4230-b361-653362333938/-/resize/300x400/-/format/webp/IMG_0452.jpg)"></div>
-                      <h3>Аренда катеров и яхт</h3></a></li>
-                  <li class="catalog__section-item full"><a href="">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild6438-6234-4962-b765-666436623231/-/resize/300x400/-/format/webp/hu-chen-pwuzRFG4Dm4-.jpg)"></div>
-                      <h3>Ночные водные экскурсии под развод мостов</h3></a></li>
-                </ul>
-              </section>
-              <section class="catalog__section">
-                <!--h2.catalog__section-title.title-section Заголовок 5-->
-                <ul class="catalog__section-list catalog__section-list--2categ">
-                  <li class="catalog__section-item half"><a href="">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3837-3363-4161-b366-396661633465/-/resize/300x400/-/format/webp/IMG_8030.JPG)"></div>
-                      <h3>Поле-свидание на самолете</h3></a></li>
-                  <li class="catalog__section-item half"><a href="">
-                      <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3630-6631-4437-b839-303836623966/-/resize/300x400/-/format/webp/aFndYDH_5.jpeg)"></div>
-                      <h3>Просмотр салюта с крыши 2023</h3></a></li>
-                </ul>
-              </section>
-            </div>
-          </div>
-          <div class="how-we-work">
-            <div class="how-we-work__container container">
-              <h2 class="title-section">Как мы работаем</h2>
-              <div class="how-we-work__body">
-                <ul class="how-we-work__list">
-                  <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/01.svg">
-                    <h3 class="how-we-work__item-title">1 Оставьте заявку</h3>
-                    <p class="how-we-work__item-text">Вы выбираете на нашем сайте интересующую услугу или мероприятие и нажимаете кнопку "Забронировать"</p>
-                  </li>
-                  <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/02.svg">
-                    <h3 class="how-we-work__item-title">2 Оплата бронирования</h3>
-                    <p class="how-we-work__item-text">В течение 15 минут, вам позвонит наш менеджер, вы выбираете удобное для вас время и дату, далее менеджер выставляет вам счет для оплаты бронирования.</p>
-                  </li>
-                  <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/03.svg">
-                    <h3 class="how-we-work__item-title">3 Подтверждение оплаты</h3>
-                    <p class="how-we-work__item-text">На указанный вами почтовый адрес или мессенджер высылается ваучер, кассовый чек. А также вся подробная информация по заказу.</p>
-                  </li>
-                  <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/04.svg">
-                    <h3 class="how-we-work__item-title">4 Программа и маршрут</h3>
-                    <p class="how-we-work__item-text">Все услуги, которые мы предоставляем, выполняют профессионалы своего дела: аккредитованные гиды, водители, капитаны со стажем, компетентные менеджеры с удовольствием ответят на все вопросы.</p>
-                  </li>
-                </ul>
+        </section>
+        <!--include ../components/_items/banner/banner-->
+        <section class="header-banner">
+          <div class="header-banner__container container">
+            <div class="header-banner__content">
+              <div class="header-banner__header">
+                <h2 class="header-banner__title">Экскурсии по Санкт&nbsp;-&nbsp;Петербургу</h2><span class="header-banner__subtitle">Ваш отдых — наша забота!</span>
               </div>
+              <ul class="header-banner__icon-list">
+                <li class="header-banner__icon-item"><img src="./assets/img/icons/feedback/people.svg"><span>Без <br> очередей</span></li>
+                <li class="header-banner__icon-item"><img src="./assets/img/icons/how-we-work/04.svg"><span>Уникальные <br> маршруты</span></li>
+                <li class="header-banner__icon-item"><img src="./assets/img/icons/ticket.svg"><span>Входные <br> билеты</span></li>
+              </ul><a class="button button--outline-black" href="#feeblack">Заказать звонок</a>
             </div>
+            <div class="header-banner__image"><img src="https://thumb.tildacdn.com/tild3432-6361-4536-b835-303965333430/-/resize/300x400/-/format/webp/2b9cd66d-9d02-4fbd-a.jpg"></div>
           </div>
-          <div class="transport-service">
-            <div class="transport-service__container container">
-              <h2 class="title-section">Транспортное обслуживание</h2>
-              <div class="transport-service__content swiper">
-                <div class="transport-service__list swiper-wrapperr">
-                  <section class="transport-service__item">
-                    <div class="transport-service__item-image-wrapper"><img src="./assets/img/transport-service/01.png"></div>
-                    <div class="transport-service__item-content"><span class="transport-service__item-level">Комфорт+</span><span class="transport-service__item-brand">VW Polo, Skoda</span><span class="transport-service__item-info">Минимальный заказ 2+1&nbsp;час</span></div>
-                    <div class="transport-service__item-footer"><span class="transport-service__item-price">600 ₽/час</span>
-                      <button class="button button--accent">Заказать</button>
+        </section>
+        <section class="excursion">
+          <div class="container">
+            <h2 class="title-section">Популярные экскурсии</h2>
+            <div class="excursion__slider-container">
+              <div class="excursion__slider-wrapper">
+                <div class="excursion__list swiper-wrapper">
+                  <article class="swiper-slide">
+                    <div class="excursion-card">
+                      <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild6131-6164-4561-b331-663531303430/-/cover/700x470/center/center/-/format/webp/Yk7xoFRUTS2DgmArrGvy.jpg"/>
+                        <div class="excursion-card__badges"><span class="excursion-card__badge">3 часа</span></div>
+                      </div>
+                      <div class="excursion-card__content">
+                        <h3 class="excursion-card__title">Императорские и великокняжеские дворцы Санкт-Петербурга</h3>
+                        <p class="excursion-card__timetable"><span>вт, сб:</span>13:00</p>
+                        <ul class="excursion-card__description-list">
+                          <li class="excursion-card__description-item">Описание 1</li>
+                          <li class="excursion-card__description-item">Описание Описание 2</li>
+                          <li class="excursion-card__description-item">Описание 3</li>
+                        </ul>
+                        <div class="excursion-card__price"><span>1 500 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
+                      </div>
                     </div>
-                  </section>
-                  <section class="transport-service__item">
-                    <div class="transport-service__item-image-wrapper"><img src="./assets/img/transport-service/02.png"></div>
-                    <div class="transport-service__item-content"><span class="transport-service__item-level">Бизнес-Класс</span><span class="transport-service__item-brand">Toyota Camry, Mercedes&nbsp;E</span><span class="transport-service__item-info">Минимальный заказ 3+1&nbsp;час</span></div>
-                    <div class="transport-service__item-footer"><span class="transport-service__item-price">750 ₽/час</span>
-                      <button class="button button--accent">Заказать</button>
+                  </article>
+                  <article class="swiper-slide">
+                    <div class="excursion-card">
+                      <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3938-3232-4336-b332-343663353738/-/cover/700x470/center/center/-/format/webp/qVt5TsyywpEXf6vpCwbn.jpg"/>
+                        <div class="excursion-card__badges"><span class="excursion-card__badge">1.5 часа</span></div>
+                      </div>
+                      <div class="excursion-card__content">
+                        <h3 class="excursion-card__title">Обзорная экскурсия по городу (автобусная или индивидуальная)</h3>
+                        <p class="excursion-card__timetable"><span>пн - вс:</span>10:00, 11:00, 12:00, 14:00, 15:00, 16:30, 17:00, 17:55</p>
+                        <ul class="excursion-card__description-list">
+                          <li class="excursion-card__description-item">Описание 1</li>
+                          <li class="excursion-card__description-item">Описание 2</li>
+                          <li class="excursion-card__description-item">Описание Описание 3</li>
+                        </ul>
+                        <div class="excursion-card__price"><span>700 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
+                      </div>
                     </div>
-                  </section>
-                  <section class="transport-service__item">
-                    <div class="transport-service__item-image-wrapper"><img src="./assets/img/transport-service/03.png"></div>
-                    <div class="transport-service__item-content"><span class="transport-service__item-level">Минивен</span><span class="transport-service__item-brand">Mercedes Вenz</span><span class="transport-service__item-info">Минимальный заказ 3+1&nbsp;час</span></div>
-                    <div class="transport-service__item-footer"><span class="transport-service__item-price">850 ₽/час</span>
-                      <button class="button button--accent">Заказать</button>
+                  </article>
+                  <article class="swiper-slide">
+                    <div class="excursion-card">
+                      <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3730-6364-4063-b130-343965336234/-/cover/350x235/center/center/-/format/webp/m9tF8ucwVgMQHnQAwo9N.jpg"/>
+                        <div class="excursion-card__badges"><span class="excursion-card__badge">2.5-3 часа</span></div>
+                      </div>
+                      <div class="excursion-card__content">
+                        <h3 class="excursion-card__title">Обзорная экскурсия по городу с посещением Эрмитажа</h3>
+                        <p class="excursion-card__timetable"><span>пн - вс:</span>13:00, 16:00</p>
+                        <ul class="excursion-card__description-list">
+                          <li class="excursion-card__description-item">Описание Описание 1</li>
+                          <li class="excursion-card__description-item">Описание 2</li>
+                          <li class="excursion-card__description-item">Описание 3</li>
+                        </ul>
+                        <div class="excursion-card__price"><span>1 500 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
+                      </div>
                     </div>
-                  </section>
-                  <section class="transport-service__item">
-                    <div class="transport-service__item-image-wrapper"><img src="./assets/img/transport-service/04.png"></div>
-                    <div class="transport-service__item-content"><span class="transport-service__item-level">Автобус (18-49 мест)</span><span class="transport-service__item-brand">Mercedes, Спринтер</span><span class="transport-service__item-info">Минимальный заказ 3+1&nbsp;час</span></div>
-                    <div class="transport-service__item-footer"><span class="transport-service__item-price">1000 ₽/час</span>
-                      <button class="button button--accent">Заказать</button>
+                  </article>
+                  <article class="swiper-slide">
+                    <div class="excursion-card">
+                      <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3236-6239-4930-a532-616235663638/-/cover/350x235/center/center/-/format/webp/g1AQbFLkCWgYpvLybfee.jpg"/>
+                        <div class="excursion-card__badges"><span class="excursion-card__badge">2.5 часа</span></div>
+                      </div>
+                      <div class="excursion-card__content">
+                        <h3 class="excursion-card__title">Новогодняя сказка Петербурга</h3>
+                        <p class="excursion-card__timetable"><span>пн - вс:</span>18:00</p>
+                        <ul class="excursion-card__description-list">
+                          <li class="excursion-card__description-item">Описание Описание 1</li>
+                          <li class="excursion-card__description-item">Описание 2</li>
+                        </ul>
+                        <div class="excursion-card__price"><span>1 200 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
+                      </div>
                     </div>
-                  </section>
+                  </article>
+                  <article class="swiper-slide">
+                    <div class="excursion-card">
+                      <div class="excursion-card__image open-form"><img src="https://thumb.tildacdn.com/tild3462-6431-4233-b332-366434303937/-/cover/350x235/center/center/-/format/webp/IMG_0856-min.JPG"/>
+                        <div class="excursion-card__badges"><span class="excursion-card__badge">2-2.5 часа</span></div>
+                      </div>
+                      <div class="excursion-card__content">
+                        <h3 class="excursion-card__title">Мифы и легенды города (автобусная или индивидуальная)</h3>
+                        <p class="excursion-card__timetable"><span>пн - вс:</span>13:00, 16:00</p>
+                        <ul class="excursion-card__description-list">
+                          <li class="excursion-card__description-item">Описание 1</li>
+                        </ul>
+                        <div class="excursion-card__price"><span>1 000 ₽</span><a class="button button--accent" href="##">Подробнее</a></div>
+                      </div>
+                    </div>
+                  </article>
                 </div>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
-          <div class="partners">
-            <div class="container partners__container">
-              <h2 class="title-section">Наши клиенты</h2>
-              <ul class="partners__list">
-                <li class="partners__item"><img src="./assets/img/partners/01.svg"></li>
-                <li class="partners__item"><img src="./assets/img/partners/02.svg"></li>
-                <li class="partners__item"><img src="./assets/img/partners/03.svg"></li>
-                <li class="partners__item"><img src="./assets/img/partners/04.png"></li>
-                <li class="partners__item"><img src="./assets/img/partners/05.jpg"></li>
-                <li class="partners__item"><img src="./assets/img/partners/06.png"></li>
-                <li class="partners__item"><img src="./assets/img/partners/07.svg"></li>
-                <li class="partners__item"><img src="./assets/img/partners/08.svg"></li>
+        </section>
+        <section class="catalog" id="excursions">
+          <div class="container catalog__container">
+            <div class="catalog__section">
+              <!--h2.catalog__section-title.title-section Заголовок 1-->
+              <ul class="catalog__section-list catalog__section-list--3categ">
+                <li class="catalog__section-item full"><a href="bright-holiday.html">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3361-6637-4630-b330-333637363065/-/resize/300x400/-/format/webp/Xp9zpOH6y_9p9aDRE43H.png)"></div>
+                    <h3>Яркий отдых в Санкт-Петербурге 2023</h3></a></li>
+                <li class="catalog__section-item half"><a href="bright-holiday.html">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3061-3565-4161-b137-383730643963/-/resize/300x400/-/format/webp/a8e3e02a-644f-11ea-a.jpg)"></div>
+                    <h3>Индивидуальные экскурсии</h3></a></li>
+                <li class="catalog__section-item half"><a href="bright-holiday.html">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3438-3839-4534-b564-303235343563/-/resize/300x400/-/format/webp/obzornye-home.jpg)"></div>
+                    <h3>Обзорные экскурсии по городу</h3></a></li>
+              </ul>
+            </div>
+            <div class="catalog__section">
+              <!--h2.catalog__section-title.title-section Заголовок 2-->
+              <ul class="catalog__section-list catalog__section-list--4categ">
+                <li class="catalog__section-item full"><a href="/test/testpage.html">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3431-3736-4431-b631-363361353638/-/resize/300x400/-/format/webp/D7l6m1AW0AADk73.png)"></div>
+                    <h3>Экскурсии в пригороды</h3></a></li>
+                <li class="catalog__section-item half"><a href="extragid.html">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3432-6361-4536-b835-303965333430/-/resize/300x400/-/format/webp/2b9cd66d-9d02-4fbd-a.jpg)"></div>
+                    <h3>Экскурсии по крышам</h3></a></li>
+                <li class="catalog__section-item half"><a href="">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3931-3930-4736-a564-616263623239/-/resize/300x400/-/format/webp/mary-ray-ctdYxnyYm1U.jpg)"></div>
+                    <h3>Парадные и Дворы Петербурга</h3></a></li>
+                <li class="catalog__section-item full"><a href="">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild6632-6165-4639-b266-353863626630/-/resize/300x400/-/format/webp/_MG_0726.jpg)"></div>
+                    <h3>Водные прогулки по рекам и каналам</h3></a></li>
+              </ul>
+            </div>
+            <div class="catalog__section">
+              <!--h2.catalog__section-title.title-section Заголовок 3-->
+              <ul class="catalog__section-list catalog__section-list--2categ">
+                <li class="catalog__section-item"><a href="">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3133-3535-4362-b530-316235633265/-/resize/300x400/-/format/webp/nightruscom-spb-0014.jpg)"></div>
+                    <h3>Ночные и вечерние экскурсии</h3></a></li>
+                <li class="catalog__section-item"><a href="">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3163-6537-4962-a666-616262653238/-/resize/300x400/-/format/webp/hermitazh-home.jpg)"></div>
+                    <h3>Авторские, тематические экскурсии</h3></a></li>
+              </ul>
+            </div>
+            <div class="catalog__section">
+              <!--h2.catalog__section-title.title-section Заголовок 4-->
+              <ul class="catalog__section-list catalog__section-list--4categ">
+                <li class="catalog__section-item"><a href="">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3233-3063-4666-a631-363061626265/-/resize/300x400/-/format/webp/S2KkI0sq0Bg.jpeg)"></div>
+                    <h3>Свидание на крыше</h3></a></li>
+                <li class="catalog__section-item"><a href="">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3964-3434-4637-b836-313239646365/-/resize/300x400/-/format/webp/B033FDA7-E44A-4D7E-8.jpeg)"></div>
+                    <h3>Фотосессии на крыше</h3></a></li>
+                <li class="catalog__section-item"><a href="">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild6161-3565-4230-b361-653362333938/-/resize/300x400/-/format/webp/IMG_0452.jpg)"></div>
+                    <h3>Аренда катеров и яхт</h3></a></li>
+                <li class="catalog__section-item full"><a href="">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild6438-6234-4962-b765-666436623231/-/resize/300x400/-/format/webp/hu-chen-pwuzRFG4Dm4-.jpg)"></div>
+                    <h3>Ночные водные экскурсии под развод мостов</h3></a></li>
+              </ul>
+            </div>
+            <div class="catalog__section">
+              <!--h2.catalog__section-title.title-section Заголовок 5-->
+              <ul class="catalog__section-list catalog__section-list--2categ">
+                <li class="catalog__section-item half"><a href="">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3837-3363-4161-b366-396661633465/-/resize/300x400/-/format/webp/IMG_8030.JPG)"></div>
+                    <h3>Поле-свидание на самолете</h3></a></li>
+                <li class="catalog__section-item half"><a href="">
+                    <div class="catalog__section-item-image" style="background-image: url(https://thumb.tildacdn.com/tild3630-6631-4437-b839-303836623966/-/resize/300x400/-/format/webp/aFndYDH_5.jpeg)"></div>
+                    <h3>Просмотр салюта с крыши 2023</h3></a></li>
               </ul>
             </div>
           </div>
-          <div class="yandex-reviews">
-            <div class="container yandex-reviews__container"><div style="width:100%; max-width: 560px; height:700px;overflow:hidden;position:relative;">
+        </section>
+        <section class="how-we-work">
+          <div class="how-we-work__container container">
+            <h2 class="title-section">Как мы работаем</h2>
+            <div class="how-we-work__body">
+              <ul class="how-we-work__list">
+                <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/01.svg">
+                  <h3 class="how-we-work__item-title">1 Оставьте заявку</h3>
+                  <p class="how-we-work__item-text">Вы выбираете на нашем сайте интересующую услугу или мероприятие и нажимаете кнопку "Забронировать"</p>
+                </li>
+                <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/02.svg">
+                  <h3 class="how-we-work__item-title">2 Оплата бронирования</h3>
+                  <p class="how-we-work__item-text">В течение 15 минут, вам позвонит наш менеджер, вы выбираете удобное для вас время и дату, далее менеджер выставляет вам счет для оплаты бронирования.</p>
+                </li>
+                <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/03.svg">
+                  <h3 class="how-we-work__item-title">3 Подтверждение оплаты</h3>
+                  <p class="how-we-work__item-text">На указанный вами почтовый адрес или мессенджер высылается ваучер, кассовый чек. А также вся подробная информация по заказу.</p>
+                </li>
+                <li class="how-we-work__item"><img class="how-we-work__item-icon" src="./assets/img/icons/how-we-work/04.svg">
+                  <h3 class="how-we-work__item-title">4 Программа и маршрут</h3>
+                  <p class="how-we-work__item-text">Все услуги, которые мы предоставляем, выполняют профессионалы своего дела: аккредитованные гиды, водители, капитаны со стажем, компетентные менеджеры с удовольствием ответят на все вопросы.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="transport-service">
+          <div class="transport-service__container container">
+            <h2 class="title-section">Транспортное обслуживание</h2>
+            <div class="transport-service__content swiper">
+              <div class="transport-service__list swiper-wrapperr">
+                <article class="transport-service__item">
+                  <div class="transport-service__item-image-wrapper"><img src="./assets/img/transport-service/01.png"></div>
+                  <div class="transport-service__item-content"><span class="transport-service__item-level">Комфорт+</span><span class="transport-service__item-brand">VW Polo, Skoda</span><span class="transport-service__item-info">Минимальный заказ 2+1&nbsp;час</span></div>
+                  <div class="transport-service__item-footer"><span class="transport-service__item-price">600 ₽/час</span>
+                    <button class="button button--accent">Заказать</button>
+                  </div>
+                </article>
+                <article class="transport-service__item">
+                  <div class="transport-service__item-image-wrapper"><img src="./assets/img/transport-service/02.png"></div>
+                  <div class="transport-service__item-content"><span class="transport-service__item-level">Бизнес-Класс</span><span class="transport-service__item-brand">Toyota Camry, Mercedes&nbsp;E</span><span class="transport-service__item-info">Минимальный заказ 3+1&nbsp;час</span></div>
+                  <div class="transport-service__item-footer"><span class="transport-service__item-price">750 ₽/час</span>
+                    <button class="button button--accent">Заказать</button>
+                  </div>
+                </article>
+                <article class="transport-service__item">
+                  <div class="transport-service__item-image-wrapper"><img src="./assets/img/transport-service/03.png"></div>
+                  <div class="transport-service__item-content"><span class="transport-service__item-level">Минивен</span><span class="transport-service__item-brand">Mercedes Вenz</span><span class="transport-service__item-info">Минимальный заказ 3+1&nbsp;час</span></div>
+                  <div class="transport-service__item-footer"><span class="transport-service__item-price">850 ₽/час</span>
+                    <button class="button button--accent">Заказать</button>
+                  </div>
+                </article>
+                <article class="transport-service__item">
+                  <div class="transport-service__item-image-wrapper"><img src="./assets/img/transport-service/04.png"></div>
+                  <div class="transport-service__item-content"><span class="transport-service__item-level">Автобус (18-49 мест)</span><span class="transport-service__item-brand">Mercedes, Спринтер</span><span class="transport-service__item-info">Минимальный заказ 3+1&nbsp;час</span></div>
+                  <div class="transport-service__item-footer"><span class="transport-service__item-price">1000 ₽/час</span>
+                    <button class="button button--accent">Заказать</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="partners">
+          <div class="container partners__container">
+            <h2 class="title-section">Наши клиенты</h2>
+            <ul class="partners__list">
+              <li class="partners__item"><img src="./assets/img/partners/01.svg"></li>
+              <li class="partners__item"><img src="./assets/img/partners/02.svg"></li>
+              <li class="partners__item"><img src="./assets/img/partners/03.svg"></li>
+              <li class="partners__item"><img src="./assets/img/partners/04.png"></li>
+              <li class="partners__item"><img src="./assets/img/partners/05.jpg"></li>
+              <li class="partners__item"><img src="./assets/img/partners/06.png"></li>
+              <li class="partners__item"><img src="./assets/img/partners/07.svg"></li>
+              <li class="partners__item"><img src="./assets/img/partners/08.svg"></li>
+            </ul>
+          </div>
+        </section>
+        <section class="yandex-reviews">
+          <div class="container yandex-reviews__container"><div style="width:100%; max-width: 560px; height:700px;overflow:hidden;position:relative;">
 <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49244336406?comments">
 </iframe>
 <a href="https://yandex.ru/maps/org/spb_travel_group/49244336406/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">SPb Travel Group на карте Санкт‑Петербурга — Яндекс Карты</a>
 </div>
-            </div>
           </div>
-          <div class="feedback container" id="feeblack">
-            <div class="feedback__container">
-              <div class="feedback__content">
-                <div class="feedback__left">
-                  <h2 class="feedback__title">Хватит искать! Просто закажите.</h2><span class="feedback__text">Ваш отдых — это наша забота!</span>
-                  <p class="feedback__text">Индивидуальный подход к туристам, гибкая ценовая политика, оперативность и качество.</p>
-                </div>
-                <ul class="feedback__icons">
-                  <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/people.svg"><span>Без очередей</span></li>
-                  <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/guide.svg"><span>Персональный экскурсовод</span></li>
-                  <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/auto.svg"><span>Автомобиль с водителем</span></li>
-                </ul>
-                <div class="feedback__right">
-                  <form class="feedback__form">
-                    <div class="feedback__form-container">
-                      <input type="tel" placeholder="+7(___)___-__-__">
-                      <button class="button button--accent" type="submit">Заказать звонок</button>
-                    </div>
-                  </form>
-                </div>
+        </section>
+        <section class="feedback container" id="feeblack">
+          <div class="feedback__container">
+            <div class="feedback__content">
+              <div class="feedback__left">
+                <h2 class="feedback__title">Хватит искать! Просто закажите.</h2><span class="feedback__text">Ваш отдых — это наша забота!</span>
+                <p class="feedback__text">Индивидуальный подход к туристам, гибкая ценовая политика, оперативность и качество.</p>
               </div>
-              <hr>
-              <p class="feedback__personal-data">Нажимая «Заказать звонок», вы даете согласие на <a href="##">обработку персональных данных</a> и принимаете условия пользовательского соглашения.</p>
+              <ul class="feedback__icons">
+                <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/people.svg"><span>Без очередей</span></li>
+                <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/guide.svg"><span>Персональный экскурсовод</span></li>
+                <li class="feedback__icons-item"><img src="./assets/img/icons/feedback/auto.svg"><span>Автомобиль с водителем</span></li>
+              </ul>
+              <div class="feedback__right">
+                <form class="feedback__form">
+                  <div class="feedback__form-container">
+                    <input type="tel" placeholder="+7 (___) ___-__-__">
+                    <button class="button button--accent" type="submit">Заказать звонок</button>
+                  </div>
+                </form>
+              </div>
             </div>
+            <hr>
+            <p class="feedback__personal-data">Нажимая «Заказать звонок», вы даете согласие на <a href="##">обработку персональных данных</a> и принимаете условия пользовательского соглашения.</p>
           </div>
         </section>
       </main>
@@ -501,10 +497,10 @@
           <div class="footer__contacts">
             <div class="footer__social">
               <ul class="footer__social-list">
-                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="##" title="telegram" style="background-image: url('./assets/img/icons/social/telegram.svg')"></a></li>
-                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="##" title="vk" style="background-image: url('./assets/img/icons/social/vk.svg')"></a></li>
-                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="##" title="instagram" style="background-image: url('./assets/img/icons/social/instagram.svg')"></a><img class="footer__social-hint-icon" src="./assets/img/icons/important.svg"><span class="footer__social-hint-text"><span>#spbtravelgroup</span> — десятки тысяч фотографий путешественников.</span></li>
-                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="##" title="whatsapp" style="background-image: url('./assets/img/icons/social/whatsapp.svg')"></a></li>
+                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="https://t.me/alinaspbtravelgroup" title="telegram" style="background-image: url('./assets/img/icons/social/telegram.svg')"></a></li>
+                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="https://vk.com/spbtravelgroup" title="vk" style="background-image: url('./assets/img/icons/social/vk.svg')"></a></li>
+                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="https://www.instagram.com/spbtravelgroup.ru" title="instagram" style="background-image: url('./assets/img/icons/social/instagram.svg')"></a><img class="footer__social-hint-icon" src="./assets/img/icons/important.svg"><span class="footer__social-hint-text"><span>#spbtravelgroup</span> — десятки тысяч фотографий путешественников.</span></li>
+                <li class="footer__social-item"><a class="footer__social-link footer__icon" href="https://api.whatsapp.com/send?phone=79111562004" title="whatsapp" style="background-image: url('./assets/img/icons/social/whatsapp.svg')"></a></li>
               </ul>
             </div><a class="footer__phone" href="tel:+79111562004">
               <svg class="footer__icon" width="35" height="35" fill="#ffcc00">
