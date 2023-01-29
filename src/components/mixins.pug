@@ -25,23 +25,7 @@ mixin inputText
     span.feedback-form__error
 
 
-// Кнопка "отправить" и согласие
-mixin sending
-  .feedback-form__sending
-    label
-      input(type='checkbox' checked)
-      span.feedback-form__checkbox
-      span.feedback-form__agreement Даю согласие на обработку персональных данных
-    button.button.arrow.button--outline(type='submit') Отправить&nbsp;вопрос
 
-// шаблон прогресс-бара
-mixin upload-progress-template
-  template.upload-progress__template
-    .feedback-form__upload-progress.feedback-form-upload-progress
-      .feedback-form-upload-progress__line(data-progress)
-      .feedback-form-upload-progress__close(data-name)
-      span.feedback-form-upload-progress__name
-      span.feedback-form-upload-progress__size
 
 //--------------------------------
 
@@ -61,8 +45,8 @@ mixin partnersItem(src)
 // Карточка экскурсии (для слайдера)
 mixin excursionsSlider (excursionData)
   each card in excursionData
-    .swiper-slide
-      article.excursion-card
+    article.swiper-slide
+      .excursion-card
         .excursion-card__image.open-form
           img(src=card.imgSrc)
           .excursion-card__badges

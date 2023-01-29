@@ -46,7 +46,6 @@ module.exports = function () {
     $.gulp.watch(
       [
         $.path.src + "/components/**/*.js",
-        //$.path.src + "/components/index.js",
         $.path.src + "/scripts/**/*.js",
       ],
       $.gulp.series("script:dev", "reload")

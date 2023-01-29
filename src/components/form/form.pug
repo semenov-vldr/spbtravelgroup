@@ -15,7 +15,7 @@ form.form(action="" method="POST" aria-hidden="true")
     // Дата
     .form__input-container
       label Дата экскурсии
-        input.date(placeholder="дд.мм.гггг" type="date" name="date" autocomplete='off' maxlength='10' )
+        input(placeholder="дд.мм.гггг" type="date" name="date" autocomplete='off' maxlength='10' )
         //span.form__error.form__error--inputDate
 
     // Формат
@@ -45,12 +45,12 @@ form.form(action="" method="POST" aria-hidden="true")
     // Время
     .form__input-container
       label Ориентировочное время?
-        input( name="time" )
+        input.form__input-time( name="time" placeholder="c 11:00 до 23:00" autocomplete='off')
 
     // Телефон
     .form__input-container
       label Телефон
-        input(type='tel' name='phone' placeholder="+0 000 000 00 00" data-tel-input pattern='.{18,}' maxlength='18'  autocomplete='off')
+        input(type='tel' name='phone' placeholder="+7 (___) ___-__-__" autocomplete='off')
         //span.form__error.form__error--inputTel
 
     // Почта
