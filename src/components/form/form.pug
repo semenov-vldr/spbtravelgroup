@@ -3,68 +3,17 @@ form.form(action="" method="POST" aria-hidden="true")
     span.form__close
       include ../../img/icons/close.svg
 
+    h3.form__title Ваша запись на экскурсию
+    h4.form__excursion-name
 
-    h4.form__title Ваша запись на экскурсию
 
-    // Имя
-    .form__input-container
-      label Как к вам обращаться ?
-        input(placeholder="Ваше имя, фамилия" name="name" pattern="^[A-Za-zА-Яа-яЁё\\s]+$" autocomplete='off' maxlength='40' )
-        //span.form__error.form__error--inputName Ошибка
+    +inputName
+    +inputDate
+    +inputFormat
+    +inputCountPeople
+    +inputTime
+    +inputTel
+    +inputEmail
+    +inputText
 
-    // Дата
-    .form__input-container
-      label Дата экскурсии
-        input(placeholder="дд.мм.гггг" type="date" name="date" autocomplete='off' maxlength='10' )
-        //span.form__error.form__error--inputDate
-
-    // Формат
-    .form__input-container
-      label Формат экскурсии
-        select.form__input-format
-          option(value="Выберите формат экскурсии") Выберите формат экскурсии
-          option(value="Групповой") Групповой (в составе общей группы)
-          option(value="Индивидуально") Индивидуально (только Вы и гид)
-
-    // Кол-во человек
-    .form__input-container
-      label Сколько у Вас человек?
-        select.form__input-count-people
-          option(value='1') 1 чел
-          option(value='2') 2 чел
-          option(value='3') 3 чел
-          option(value='4') 4 чел
-          option(value='5') 5 чел
-          option(value='6') 6 чел
-          option(value='7') 7 чел
-          option(value='8') 8 чел
-          option(value='9') 9 чел
-          option(value='10') 10 чел
-          option(value='Более 10') Более 10 чел.
-
-    // Время
-    .form__input-container
-      label Ориентировочное время?
-        input.form__input-time( name="time" placeholder="c 11:00 до 23:00" autocomplete='off')
-
-    // Телефон
-    .form__input-container
-      label Телефон
-        input(type='tel' name='phone' placeholder="+7 (___) ___-__-__" autocomplete='off')
-        //span.form__error.form__error--inputTel
-
-    // Почта
-    .form__input-container
-      label Почта
-        input(type='email' name="email" maxlength='40' placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"  )
-        //span.form__error.form__error--inputEmail
-
-    // Комментарий
-    .form__input-container
-      label Комментарий
-        textarea( placeholder="Введите ваше сообщение..." name="message" maxlength='200' rows="4")
-        //span.form__error.form__error--inputText
-
-    button.button.button--accent(type="submit") Отправить
-
-    p Нажатием на кнопку вы подтверждаете свою запись на экскурсию и обработку персональных данных в соответствии пользовательским соглашением.
+    +FormAction

@@ -10,5 +10,5 @@ function getExcursionCards () {
 
 
 getExcursionCards().then(cards => {
-  cards.forEach(card => createExcursionCard(card))
-})
+  cards.forEach(card => createExcursionCard(card));
+}).then(() => openForm());

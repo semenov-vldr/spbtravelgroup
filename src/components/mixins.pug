@@ -2,43 +2,88 @@
 
 // Name
 mixin inputName
-  .feedback-form__input-container
-    input(placeholder="Иванов Иван Иванович*" name="name" pattern="^[A-Za-zА-Яа-яЁё\\s]+$" autocomplete='off' maxlength='40' required )
-    span.feedback-form__error
+  .form__input-container
+    label Как к вам обращаться ?
+      input(placeholder="Ваше имя, фамилия" name="name" pattern="^[A-Za-zА-Яа-яЁё\\s]+$" autocomplete='off' maxlength='40' )
+      //span.form__error.form__error--inputName Ошибка
+
+// Дата
+mixin inputDate
+  .form__input-container
+    label Дата экскурсии
+      input(placeholder="дд.мм.гггг" type="date" name="date" autocomplete='off' maxlength='10' )
+      //span.form__error.form__error--inputDate
+
+
+// Формат
+mixin inputFormat
+  .form__input-container
+    label Формат экскурсии
+      select.form__input-format
+        option(value="Выберите формат экскурсии") Выберите формат экскурсии
+        option(value="Групповой") Групповой (в составе общей группы)
+        option(value="Индивидуально") Индивидуально (только Вы и гид)
+
+// Кол-во человек
+mixin inputCountPeople
+  .form__input-container
+    label Сколько у Вас человек?
+      select.form__input-count-people
+        option(value='1') 1 чел
+        option(value='2') 2 чел
+        option(value='3') 3 чел
+        option(value='4') 4 чел
+        option(value='5') 5 чел
+        option(value='6') 6 чел
+        option(value='7') 7 чел
+        option(value='8') 8 чел
+        option(value='9') 9 чел
+        option(value='10') 10 чел
+        option(value='Более 10') Более 10 чел.
+
+// Time
+mixin inputTime
+  .form__input-container
+    label Ориентировочное время?
+      input.form__input-time( name="time" placeholder="c 11:00 до 23:00" autocomplete='off')
+
+
 
 // Tel
 mixin inputTel
-  .feedback-form__input-container
-    input(type='tel' name='phone' placeholder="+7(___)___-__-__*" data-tel-input='' pattern='.{18,}' maxlength='18'  autocomplete='off' required )
-    span.feedback-form__error
+  .form__input-container
+    label Телефон
+      input(type='tel' name='phone' placeholder="+7 (___) ___-__-__" autocomplete='off')
+      //span.form__error.form__error--inputTel
 
 // Email
 mixin inputEmail
-  .feedback-form__input-container
-    input(type='email' name="email" maxlength='40' placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required )
-    span.feedback-form__error
+  .form__input-container
+    label Почта
+      input(type='email' name="email" maxlength='40' placeholder="example@email.ru*" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"  )
+      //span.form__error.form__error--inputEmail
 
 // Text
 mixin inputText
-  .feedback-form__input-container
-    textarea( placeholder="Пожалуйста, введите запрос*" name="message" maxlength='200' rows="4" required)
-    span.feedback-form__error
+  .form__input-container
+    label Комментарий
+      textarea( placeholder="Введите ваше сообщение..." name="message" maxlength='200' rows="4")
+      //span.form__error.form__error--inputText
 
-
-
+mixin FormAction
+  button.button.button--accent(type="submit") Отправить
+  p Нажатием на кнопку вы подтверждаете свою запись на экскурсию и обработку персональных данных в соответствии пользовательским соглашением.
 
 //--------------------------------
 
+
+
+
   // breadcrumbs
-mixin breadcrumbs_icon
-  svg(width="7" height="6" fill='#fff')
-    use(href="./assets/img/sprite.svg#breadcrumbs")
+//mixin breadcrumbs_icon
+//  svg(width="7" height="6" fill='#fff')
+//    use(href="./assets/img/sprite.svg#breadcrumbs")
 
-
-// карточка партнера
-mixin partnersItem(src)
-  li.partners__item
-    img.partners__logo(src=src)
 
 
 
@@ -47,7 +92,7 @@ mixin excursionsSlider (excursionData)
   each card in excursionData
     article.swiper-slide
       .excursion-card
-        .excursion-card__image.open-form
+        .excursion-card__image
           img(src=card.imgSrc)
           .excursion-card__badges
             span.excursion-card__badge=card.duration
@@ -66,23 +111,23 @@ mixin excursionsSlider (excursionData)
 
 
 // Карточка экскурсии
-mixin excursions (excursionData)
-  each card in excursionData
-    article.excursion-card
-      .excursion-card__image
-        img(src=card.imgSrc)
-        .excursion-card__badges
-          span.excursion-card__badge=card.duration
-      .excursion-card__content
-        h3.excursion-card__title=card.title
-        p.excursion-card__timetable
-          span #{card.days}:
-          | #{card.time}
-        ul.excursion-card__description-list
-          if card.descriptionList
-            each descriptionItem in card.descriptionList
-              li.excursion-card__description-item=descriptionItem
-        .excursion-card__price
-          span=card.price
-          a.button.button--accent(href=card.link) Подробнее
+//mixin excursions (excursionData)
+//  each card in excursionData
+//    article.excursion-card
+//      .excursion-card__image
+//        img(src=card.imgSrc)
+//        .excursion-card__badges
+//          span.excursion-card__badge=card.duration
+//      .excursion-card__content
+//        h3.excursion-card__title=card.title
+//        p.excursion-card__timetable
+//          span #{card.days}:
+//          | #{card.time}
+//        ul.excursion-card__description-list
+//          if card.descriptionList
+//            each descriptionItem in card.descriptionList
+//              li.excursion-card__description-item=descriptionItem
+//        .excursion-card__price
+//          span=card.price
+//          a.button.button--accent(href=card.link) Подробнее
 
