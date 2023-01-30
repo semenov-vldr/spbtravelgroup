@@ -112,38 +112,39 @@ const footer = document.querySelector('.footer');
 const copyrightYear = footer.querySelector('.footer__copyright span');
 copyrightYear.textContent = new Date().getFullYear();
 
-{
+function openForm () {
 
-  const form = document.querySelector('.form');
+    const form = document.querySelector('.form');
 
-  const openFormBtns = document.querySelectorAll('.open-form'); // элементы с этим классом открывают форму
+    const formExcursionName = form.querySelector('.form__excursion-name');
 
-  if (form && openFormBtns) openForm(form, openFormBtns);
+    const openFormBtns = document.querySelectorAll('.open-form'); // элементы с этим классом открывают форму'
 
-  function openForm (form, openFormBtns) {
     const close = form.querySelector('.form__close');
     close.addEventListener('click', hiddenForm);
 
     openFormBtns.forEach(openFormBtn => {
-      openFormBtn.addEventListener('click', visibleForm)
-    })
+      openFormBtn.addEventListener('click', () => visibleForm(openFormBtn));
+    });
 
     function hiddenForm () {
       form.classList.remove('js-form-active');
       form.reset();
-    }
+      formExcursionName.textContent = '';
+    };
 
-    function visibleForm () {
+    function visibleForm (openFormBtn) {
       form.classList.add('js-form-active');
-    }
+      const titleSelectedCard = openFormBtn.closest('.excursion-card').querySelector('.excursion-card__title').textContent;
+      formExcursionName.textContent = titleSelectedCard;
+    };
 
     document.addEventListener('click', (evt) => {
       if(evt.target === form) hiddenForm();
-    })
+    });
   };
 
 
-}
 
 
 
@@ -447,8 +448,8 @@ function getExcursionCards () {
 
 
 getExcursionCards().then(cards => {
-  cards.forEach(card => createExcursionCard(card))
-})
+  cards.forEach(card => createExcursionCard(card));
+}).then(() => openForm());
 
 
 const html = document.querySelector('html');

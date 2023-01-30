@@ -1,12 +1,37 @@
 
 <!-- ---- Form ------------>
 <!-- Name-->
+<!-- Дата-->
+<!-- Формат-->
+<!-- Кол-во человек-->
+<!-- Time-->
 <!-- Tel-->
 <!-- Email-->
 <!-- Text-->
-<!-- карточка партнера-->
+<!--mixin breadcrumbs_icon-->
+<!--  svg(width="7" height="6" fill='#fff')-->
+<!--    use(href="./assets/img/sprite.svg#breadcrumbs")-->
 <!-- Карточка экскурсии (для слайдера)-->
-<!-- Карточка экскурсии--><!DOCTYPE html>
+<!-- Карточка экскурсии-->
+<!--mixin excursions (excursionData)-->
+<!--  each card in excursionData-->
+<!--    article.excursion-card-->
+<!--      .excursion-card__image-->
+<!--        img(src=card.imgSrc)-->
+<!--        .excursion-card__badges-->
+<!--          span.excursion-card__badge=card.duration-->
+<!--      .excursion-card__content-->
+<!--        h3.excursion-card__title=card.title-->
+<!--        p.excursion-card__timetable-->
+<!--          span #{card.days}:-->
+<!--          | #{card.time}-->
+<!--        ul.excursion-card__description-list-->
+<!--          if card.descriptionList-->
+<!--            each descriptionItem in card.descriptionList-->
+<!--              li.excursion-card__description-item=descriptionItem-->
+<!--        .excursion-card__price-->
+<!--          span=card.price-->
+<!--          a.button.button--accent(href=card.link) Подробнее--><!DOCTYPE html>
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
